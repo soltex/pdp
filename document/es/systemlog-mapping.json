@@ -1,0 +1,56 @@
+{
+  "pdp.syslog.mapping": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "store": "yes",
+        "index": "not_analyzed"
+      },
+      "sysInsertTime": {
+        "type": "long",
+        "store": "yes",
+        "index": "not_analyzed"
+      },
+      "logContent_ansj": {
+        "type": "string",
+        "store": "yes",
+        "indexAnalyzer": "index_ansj",
+        "searchAnalyzer": "query_ansj"
+      },
+      "logContent_ik": {
+        "type": "string",
+        "store": "yes",
+        "indexAnalyzer": "ik",
+        "searchAnalyzer": "ik"
+      },
+      "logContent_pinyin": {
+        "type": "string",
+        "store": "yes",
+        "indexAnalyzer": "pinyin_ngram_analyzer",
+        "searchAnalyzer": "pinyin_ngram_analyzer"
+      },
+      "content_ansj": {
+        "type": "string",
+        "store": "yes",
+        "indexAnalyzer": "index_ansj",
+        "searchAnalyzer": "query_ansj"
+      },
+      "content_ik": {
+        "type": "string",
+        "store": "yes",
+        "indexAnalyzer": "ik",
+        "searchAnalyzer": "ik"
+      },
+      "globalLogType": {
+        "type": "string",
+        "store": "yes",
+        "index": "not_analyzed"
+      },
+      "logLevel": {
+        "type": "string",
+        "store": "yes",
+        "index": "not_analyzed"
+      }
+    }
+  }
+}

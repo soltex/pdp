@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="cn.com.innodev.pdp.proprietor.persistence.PropValidatecodeDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.proprietor.persistence.object.PropValidatecodeDO">
+		<id column="MOBILE" property="mobile" jdbcType="VARCHAR" />
+		<result column="VALIDATECODE" property="validatecode" jdbcType="VARCHAR" />
+		<result column="EXPIRE_TIME" property="expireTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		MOBILE, VALIDATECODE, EXPIRE_TIME
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from prop_validatecode
+		where MOBILE = #{mobile,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from prop_validatecode
+		where MOBILE = #{mobile,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropValidatecodeDO">
+		insert into prop_validatecode (MOBILE, VALIDATECODE, EXPIRE_TIME
+		)
+		values (#{mobile,jdbcType=VARCHAR}, #{validatecode,jdbcType=VARCHAR},
+		#{expireTime,jdbcType=TIMESTAMP}
+		)
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropValidatecodeDO">
+		insert into prop_validatecode
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="mobile != null">
+				MOBILE,
+			</if>
+			<if test="validatecode != null">
+				VALIDATECODE,
+			</if>
+			<if test="expireTime != null">
+				EXPIRE_TIME,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="mobile != null">
+				#{mobile,jdbcType=VARCHAR},
+			</if>
+			<if test="validatecode != null">
+				#{validatecode,jdbcType=VARCHAR},
+			</if>
+			<if test="expireTime != null">
+				#{expireTime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropValidatecodeDO">
+		update prop_validatecode
+		<set>
+			<if test="validatecode != null">
+				VALIDATECODE = #{validatecode,jdbcType=VARCHAR},
+			</if>
+			<if test="expireTime != null">
+				EXPIRE_TIME = #{expireTime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where MOBILE = #{mobile,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropValidatecodeDO">
+		update prop_validatecode
+		set VALIDATECODE = #{validatecode,jdbcType=VARCHAR},
+		EXPIRE_TIME = #{expireTime,jdbcType=TIMESTAMP}
+		where MOBILE = #{mobile,jdbcType=VARCHAR}
+	</update>
+	<delete id='deleteAll' >
+		DELETE FROM prop_validatecode
+	</delete>
+</mapper>

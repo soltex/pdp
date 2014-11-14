@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.innodev.pdp.community.persistence.ComBuildingDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.community.persistence.object.ComBuildingDO">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="BUILDING_NO" property="buildingNo" jdbcType="VARCHAR" />
+		<result column="COMMUNITY_ID" property="communityId" jdbcType="VARCHAR" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs"
+		type="cn.com.innodev.pdp.community.persistence.object.ComBuildingDO"
+		extends="BaseResultMap">
+		<result column="CONTENT" property="content" jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, BUILDING_NO, COMMUNITY_ID
+	</sql>
+	<sql id="Blob_Column_List">
+		CONTENT
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from com_building
+		where ID = #{id,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from com_building
+		where ID = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComBuildingDO"
+		useGeneratedKeys="true" keyProperty="id">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			select LAST_INSERT_ID() as id
+		</selectKey>
+		insert into com_building (ID, BUILDING_NO, COMMUNITY_ID,
+		CONTENT)
+		values (#{id,jdbcType=INTEGER}, #{buildingNo,jdbcType=VARCHAR},
+		#{communityId,jdbcType=VARCHAR},
+		#{content,jdbcType=LONGVARCHAR})
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComBuildingDO"
+		useGeneratedKeys="true" keyProperty="id">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			select LAST_INSERT_ID() as id
+		</selectKey>
+		insert into com_building
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="buildingNo != null">
+				BUILDING_NO,
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID,
+			</if>
+			<if test="content != null">
+				CONTENT,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="buildingNo != null">
+				#{buildingNo,jdbcType=VARCHAR},
+			</if>
+			<if test="communityId != null">
+				#{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComBuildingDO">
+		update com_building
+		<set>
+			<if test="buildingNo != null">
+				BUILDING_NO = #{buildingNo,jdbcType=VARCHAR},
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				CONTENT = #{content,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKeyWithBLOBs"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComBuildingDO">
+		update com_building
+		set BUILDING_NO = #{buildingNo,jdbcType=VARCHAR},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+		CONTENT = #{content,jdbcType=LONGVARCHAR}
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComBuildingDO">
+		update com_building
+		set BUILDING_NO = #{buildingNo,jdbcType=VARCHAR},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<select id="selectByRoomNo" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT <include refid="Base_Column_List"/>,<include refid="Blob_Column_List"/>
+		FROM 
+		com_building 
+		WHERE 
+		BUILDING_NO = #{buildingNo,jdbcType=VARCHAR} AND COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+	</select>
+	<select id="selectByRoomNo_NotSelf" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT <include refid="Base_Column_List"/>,<include refid="Blob_Column_List"/>
+		FROM 
+		com_building 
+		WHERE 
+		 BUILDING_NO = #{buildingNo,jdbcType=VARCHAR} 
+		 AND 
+		 ID &lt;&gt; #{id,jdbcType=INTEGER}
+	</select>
+	<select id="selectByCommunityId" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT <include refid="Base_Column_List"/>,<include refid="Blob_Column_List"/> FROM 
+		com_building 
+		WHERE 
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+	</select>
+</mapper>

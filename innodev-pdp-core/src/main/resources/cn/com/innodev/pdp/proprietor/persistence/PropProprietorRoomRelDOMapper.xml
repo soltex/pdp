@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="cn.com.innodev.pdp.proprietor.persistence.PropProprietorRoomRelDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorRoomRelDOKey">
+		<id column="PROPRIETOR_ID" property="proprietorId" jdbcType="VARCHAR" />
+		<id column="ROOM_ID" property="roomId" jdbcType="INTEGER" />
+	</resultMap>
+	<delete id="deleteByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorRoomRelDOKey">
+		delete from prop_proprietor_room_rel
+		where PROPRIETOR_ID = #{proprietorId,jdbcType=VARCHAR}
+		and ROOM_ID = #{roomId,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorRoomRelDOKey">
+		insert into prop_proprietor_room_rel (PROPRIETOR_ID, ROOM_ID)
+		values (#{proprietorId,jdbcType=VARCHAR}, #{roomId,jdbcType=INTEGER})
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorRoomRelDOKey">
+		insert into prop_proprietor_room_rel
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="proprietorId != null">
+				PROPRIETOR_ID,
+			</if>
+			<if test="roomId != null">
+				ROOM_ID,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="proprietorId != null">
+				#{proprietorId,jdbcType=VARCHAR},
+			</if>
+			<if test="roomId != null">
+				#{roomId,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+	<select id="selectByRoomId" parameterType="map" resultType="integer">
+		SELECT COUNT(0) AS C FROM 
+		prop_proprietor_room_rel 
+		WHERE 
+		ROOM_ID = #{roomId,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByProprietorId" parameterType="map">
+		DELETE FROM prop_proprietor_room_rel
+		WHERE 
+		PROPRIETOR_ID = #{proprietorId,jdbcType=VARCHAR}
+	</delete>
+	<select id="selectCountByRoomId" parameterType="map" resultType="integer">
+		SELECT COUNT(0) AS C FROM 
+		prop_proprietor_room_rel 
+		WHERE 
+		ROOM_ID = #{roomId,jdbcType=INTEGER}
+	</select>
+</mapper>

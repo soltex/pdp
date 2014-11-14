@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.innodev.pdp.community.persistence.ComQADOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.community.persistence.object.ComQADO">
+		<id column="ID" property="id" jdbcType="VARCHAR" />
+		<result column="TITLE" property="title" jdbcType="VARCHAR" />
+		<result column="SYS_INSERT_TIME" property="sysInsertTime"
+			jdbcType="TIMESTAMP" />
+		<result column="SYS_UPDATE_TIME" property="sysUpdateTime"
+			jdbcType="TIMESTAMP" />
+		<result column="COMMUNITY_ID" property="communityId" jdbcType="VARCHAR" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs"
+		type="cn.com.innodev.pdp.community.persistence.object.ComQADO"
+		extends="BaseResultMap">
+		<result column="CONTENT" property="content" jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, TITLE, SYS_INSERT_TIME, SYS_UPDATE_TIME, COMMUNITY_ID
+	</sql>
+	<sql id="Blob_Column_List">
+		CONTENT
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from com_qa
+		where ID = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from com_qa
+		where ID = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComQADO">
+		insert into com_qa (ID, TITLE, SYS_INSERT_TIME,
+		SYS_UPDATE_TIME, COMMUNITY_ID, CONTENT
+		)
+		values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR},
+		#{sysInsertTime,jdbcType=TIMESTAMP},
+		#{sysUpdateTime,jdbcType=TIMESTAMP}, #{communityId,jdbcType=VARCHAR},
+		#{content,jdbcType=LONGVARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComQADO">
+		insert into com_qa
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="title != null">
+				TITLE,
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME,
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME,
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID,
+			</if>
+			<if test="content != null">
+				CONTENT,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="title != null">
+				#{title,jdbcType=VARCHAR},
+			</if>
+			<if test="sysInsertTime != null">
+				#{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				#{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="communityId != null">
+				#{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComQADO">
+		update com_qa
+		<set>
+			<if test="title != null">
+				TITLE = #{title,jdbcType=VARCHAR},
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				CONTENT = #{content,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKeyWithBLOBs"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComQADO">
+		update com_qa
+		set TITLE = #{title,jdbcType=VARCHAR},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+		CONTENT = #{content,jdbcType=LONGVARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComQADO">
+		update com_qa
+		set TITLE = #{title,jdbcType=VARCHAR},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<select id="selectByCommunityId" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT <include refid="Base_Column_List"/>,<include refid="Blob_Column_List"/> FROM 
+		com_qa 
+		WHERE 
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR} 
+		ORDER BY SYS_INSERT_TIME DESC 
+	</select>
+	<select id="selectCountByCommunityId" parameterType="map" resultType="integer">
+		SELECT COUNT(0) AS C  FROM 
+		com_qa 
+		WHERE 
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR} 
+	</select>
+</mapper>

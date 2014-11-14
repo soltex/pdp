@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/argylesoftware-codebuilder-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<context id="document">
+		
+		<!-- 去除自动生成的注释 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/pdp" userId="root"
+			password="root" />
+		
+		<javaModelGenerator targetPackage="cn.com.innodev.pdp.proprietor.persistence.object" targetProject="document" />
+		<sqlMapGenerator targetPackage="cn.com.innodev.pdp.proprietor.persistence" targetProject="document" />
+		<javaClientGenerator targetPackage="cn.com.innodev.pdp.proprietor.persistence" targetProject="document" type="XMLMAPPER" />
+		
+		<table 
+			schema="pdp" 
+			tableName="PROP_VISITOR_LOG_QR_SCENE" 
+			domainObjectName="PropVisitorLogQRSceneDO"
+			enableInsert="true" enableUpdateByPrimaryKey="true"
+			enableDeleteByPrimaryKey="true" enableSelectByExample="false"
+			enableDeleteByExample="false" enableUpdateByExample="false"
+			selectByExampleQueryId="false" enableCountByExample="false" />
+		
+	</context>
+	
+</generatorConfiguration>

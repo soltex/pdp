@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>接口模式演示程序</title>
+<link href="../share/style.css" rel="stylesheet" type="text/css" />
+<link href="../share/api_style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #CCCCCC;
+}
+.tdd{ background-color=#FFFFEA ; color: #FF9933}
+-->
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="left" bgcolor="#00314F"><img src="../images/api_01.jpg" width="713" height="87" /></td>
+		<td align="left" bgcolor="#00314F">
+			<table width="100%" height="80" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="right" style="padding-right:20px;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="color:#FFFFFF;padding-right:20px;" align="right"><strong>时代互联接口模式源程序 Version 2.4</strong></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="25" background="../images/api_03.jpg"></td>
+		<td bgcolor="#000000">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="186" rowspan="2" valign="top" bgcolor="#787878">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="20" bgcolor="#000000"></td>
+				</tr>
+				<tr>
+					<td>
+						<ul  class="class""menu_link">
+							<li ><a href="../" class="menu_hot"><font color="#FF9900">返回演示首页</font></a> </li>
+							<li><a href="../doc/config.html" class="menu">接口模式说明</a> </li>
+							<li><a href="../doc/func.html"class="menu">接口函数说明</a> </li>
+							<li><a href="../smsdemo/smsconf.jsp"class="menu">SMS接口配置</a> </li>
+							<li><a href="../smsdemo/smssend.jsp"class="menu">发送短信</a> </li>
+							<li><a href="../smsdemo/smsaccount.jsp"class="menu">短信用户余额查询</a> </li>
+							<li><a href="../smsdemo/smsreceive.jsp"class="menu">回复短信查询</a> </li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+		<td valign="top" bgcolor="#FFFFFF" style="padding:1px 0px 1px 1px;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="left" bgcolor="#030504"><img src="../images/api_07.jpg" width="819" height="183" /></td>
+				</tr>
+				<tr>
+					<td align="left"><img src="../images/api_08.jpg" width="819" height="12" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" style="padding:5px 5px 10px 10px;" bgcolor="#FFFFFF">
+			<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" >
+				<tr>
+					<td scope="row" background="../images/bg.gif"  height="25" align="center" class="text_blue14"><b> = 接口模式配置说明(java 版) =</b></td>
+				</tr>
+			</table>
+			<table width="90%"  border="1" align="center" cellpadding="1" cellspacing="0" bordercolorlight="#FFFFFF" bordercolor="#F5EEE8">
+				<tr>
+					<td scope="row">
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="87%" class="clear">
+									<dd>为给广大短信用户提供一个更强大的短信业务平台，时代互联隆重推出API接口模式，实现与时代互联SMS短信实时在线发送接口的对接，您只需简单完成信息填写，就可以使网站实现发送短信、查询帐号余额等功能，简单，快捷。 
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table width="90%"  border="1" align="center" cellpadding="1" cellspacing="0" bordercolorlight="#FFFFFF" bordercolor="#F5EEE8">
+				<tr>
+					<td scope="row">
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<th  background="../images/bg.gif" class="text_blue14" height="25"> = 接口模式系统要求 =</th>
+							</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<th width="13%" scope="row"><img src="../images/info.gif" width="47" height="44"></th>
+								<td width="87%" > 要使用本接口演示程序，你所必需的配置为：
+									<ul>
+										<li>
+											<dd>
+											<dd>服务器或者虚拟主机必须支持<b class="red">JDK1.5(如：<span class="style7">Tomcat</span>|<span class="style7">weblogic</span>等)</b> 
+										</li>
+										<li>
+											<dd>
+											<dd>将下载包<b class="red">解压缩</b>到Tomcat 或其它的Web服务器的执行目录(webapps)下, 然后按下面步骤<b class="red">配置</b> 
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table width="90%"  border="1" align="center" cellpadding="1" cellspacing="0" bordercolorlight="#FFFFFF" bordercolor="#F5EEE8">
+				<tr>
+					<td scope="row">
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<th background="../images/bg.gif" class="text_blue14" height="25"> = 接口模式配置说明 =</th>
+							</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td colspan="2" class="clear" scope="row">
+									<dd>下载并解压缩开发、演示程序包，并确认拥有符合接口模式要求的系统后，你所需要做的唯一修改仅仅是配置接口服务器、端口、用户名和密码； <br>
+									<dd><font color=green>安装并配置了上面的两种必备之后，使用默认网站或新建一个网站目录，您选择演示程序放到服务器的应用程序执行目录（如：webapps）中。</font>
+										<p>
+									<dd>1、解压后，直接把其中的演示程序包smsdemo 拷贝到您的服务器(如tomcat)或者虚拟主机的web应用执行目录(webapps)下。<br>
+									<dd>2、请把/WEB-INF/下的文件，拷贝到你服务器(如tomcat)或者虚拟主机的/WEB-INF/目录下。<br>
+									<dd>3、<font color="#FF0000">请注意：配置您解压缩后的程序目录中WEB-INF/classes/VCPConfig.ini 文件。</font><br>
+									<dd>请打开解压缩后的程序根目录下，在其中可以找到一个名为“<font color="#FF0000">WEB-INF/classes/VCPConfig.ini</font>”的文件，该文件中有四个变量，分别为：
+								</td>
+							</tr>
+							<tr>
+								<td width="14%" class="clear" scope="row">&nbsp;</td>
+								<td width="86%" class="clear" scope="row"><span class="blue">VCPSERVER</span> （接口服务器）：在value里改成我们公布的服务器接口；<br>
+									<span class="blue">VCPSVPORT</span> （服务器端口）：请修改成我们公布的端口；<br>
+									<span class="blue">VCPUSERID</span> （短信帐号）：短信的真实或测试帐号；<br>
+									<span class="blue">VCPPASSWD </span>（验证密码）：短信的真实或测试的密码；</td>
+							</tr>
+							<tr>
+								<td height="25" colspan="2" align="left" scope="row" bgcolor="#f7f7f7" class="tdd">　
+									一、VCPSERVER（接口服务器）如何配置？</td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row">&nbsp;</td>
+								<td align="left" class="clear" scope="row"> 在测试环境，使用的接口服务器为：<br>
+									<span class="blue">testxml.todaynic.com</span><br>
+									即&quot;<span class="red style7">VCPConfig.ini</span>&quot;第一行应该配置为：<br>
+									<span class="blue">VCPSERVER</span>=<font color="#006600">testxml.todaynic.com</font><br>
+									测试完成后，在真实环境中，，使用的接口服务器为<br>
+									<span class="blue">sms.todaynic.com</span><br>
+									即&quot;<font color="#FF0000">VCPConfig.ini</font>“第一行应该配置为： <br>
+									<span class="blue">VCPSERVER</span>＝<font color="#006600">sms.todaynic.com</font> </td>
+							</tr>
+							<tr>
+								<td height="25" colspan="2" bgcolor="#f7f7f7" class="tdd">　二、VCPSVPORT（端口）如何配置？</td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row">&nbsp;</td>
+								<td  align="left" class="clear"><br>
+									在测试环境和真实环境，使用的接口均为<span class="red">20002</span>;即&quot;<span class="red style7">VCPConfig.ini</span>&quot;第二行应该配置为:<br>
+									<span class="blue">VCPSVPORT = 20002 </span><br>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td height="25" colspan="2" bgcolor="#f7f7f7" class="tdd">　三、$vcpuser（代理号）如何配置？</td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row">&nbsp;</td>
+								<td  align="left" class="clear"><br>
+									在这为时代互联为您提供一个测试帐号，将&quot;<span class="red">config.inc.php</span>&quot;第三行和第四行配置为:<br>
+									<span class="blue">VCPUSERID = ms1166 </span>（请填写我们提供的测试帐户或真实帐号）<br>
+									<span class="blue">VCPPASSWD =  odqymj </span>（请填写我们提供的测试密码或真实密码）<br>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td height="25" colspan="2" bgcolor="#f7f7f7" class="tdd">　四、如果根目录已经有了 WEB-INF/Config.ini 这个文件该如何处理？</td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row">&nbsp;</td>
+								<td  align="left" class="clear"><br>
+									需要替换覆盖原来的<span class="blue"> VCPConfig.ini</span> 就可以了。<br>
+									配好后格式如：<br>
+									<span class="blue">VCPSERVER</span>=<font color="#006600">testxml.todaynic.com</font><br>
+									<span class="blue">VCPSVPORT</span>=<span class="blue"><font color="#006600">20002</font></span><br>
+									<span class="blue">VCPUSERID</span>=<span class="blue"><font color="#006600">ms1166</font></span><br>
+									<span class="blue">VCPPASSWD</span>=<span class="blue"><font color="#006600">odqymj</font></span><br>
+									<br>
+								</td>
+							</tr>
+							<tr name="5">
+								<td height="25" colspan="2" bgcolor="#f7f7f7" class="tdd">　五、常见问题解答</td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row">&nbsp;</td>
+								<td  class="clear"><br>
+									1、 <font color="red">如何放置WEB-INF/class、WEB-INF/lib目录下的文件</font><br>
+									<dd> WEB-INF/lib 下有filter.jar、jdom.jar和smsapi.jar 都是API开发包<br>
+									<dd> 请将解压后WEB-INF/lib下的文件全部拷到您webapp下的WEB-INF/lib<br>
+									<dd> 请将解压后WEB-INF/class下的VCPConfig.ini 文件拷到您webapp下的WEB-INF/class下，并按照说明进行更改<br>
+										2、 <font color="red">认证失败(Authorization error)？</font><br>
+									<dd>确保在真实的服务器下使用真实的帐号和密码，或在测试的服务器下使用测试的帐号和密码<br>
+									<dd>确保输入的帐号和密码正确；<br>
+										3、 <font color="red">为何成功发送却收不到短信？</font><br>
+									<dd>您可能没有使用真实的服务器或真实的帐号；<br>
+									<dd>网络可能有些延迟，换个时间重试。<br>
+										4、 <font color="red">测试服务器与真实服务器的区别？</font><br>
+									<dd>测试服务器，只是一个模拟的环境，用来查看返回信息和调试程序，不会真正发送到手机上，也不会扣除真实帐号上的余额；<br>
+									<dd>真实服务器，真正发送到手机上并扣除用户余额。<br>
+										5、 <font color="red">操作成功的标志是什么？</font><br>
+									<dd>状态:2000 <br>
+									<dd>信息:Command complateted successfully<br>
+									<dd>即是操作成功的标志<br>
+										<br>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table width="90%"  border="0" align="center" cellpadding="1" cellspacing="0" bordercolorlight="#FFFFFF" bordercolor="#F5EEE8">
+				<tr>
+					<td align="center">
+						<input name="next" type="button" value="下一步，接口函数说明" onClick="location.href='func.html'" class="button_orange">
+						&nbsp;&nbsp;&nbsp;
+						<input name="return" type="button" value="上一步" class="buttonback" onClick="location.href='javascript:history.go(-1)'">
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="30" align="center" bgcolor="#00314F" style="color:#FFFFFF">时代互联 版权所有</td>
+	</tr>
+</table>
+</body>
+</html>

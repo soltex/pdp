@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="cn.com.innodev.pdp.community.persistence.ComProjectStaffDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.community.persistence.object.ComProjectStaffDO">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="ACCOUNT_NAME" property="accountName" jdbcType="VARCHAR" />
+		<result column="ACCOUNT_PASSWORD" property="accountPassword"
+			jdbcType="VARCHAR" />
+		<result column="FULL_NAME" property="fullName" jdbcType="VARCHAR" />
+		<result column="EMAIL" property="email" jdbcType="VARCHAR" />
+		<result column="MOBILE1" property="mobile1" jdbcType="VARCHAR" />
+		<result column="MOBILE2" property="mobile2" jdbcType="VARCHAR" />
+		<result column="MOBILE3" property="mobile3" jdbcType="VARCHAR" />
+		<result column="MOBILE4" property="mobile4" jdbcType="VARCHAR" />
+		<result column="SYS_INSERT_TIME" property="sysInsertTime"
+			jdbcType="TIMESTAMP" />
+		<result column="SYS_UPDATE_TIME" property="sysUpdateTime"
+			jdbcType="TIMESTAMP" />
+		<result column="LAST_LOGIN_TIME" property="lastLoginTime"
+			jdbcType="TIMESTAMP" />
+		<result column="HEAD_IMAGE_FILE_ID" property="headImageFileId"
+			jdbcType="VARCHAR" />
+		<result column="HEAD_IMAGE_FILE_EXT" property="headImageFileExt"
+			jdbcType="VARCHAR" />
+		<result column="HEAD_IMAGE_FILE_WIDTH" property="headImageFileWidth"
+			jdbcType="INTEGER" />
+		<result column="HEAD_IMAGE_FILE_HEIGHT" property="headImageFileHeight"
+			jdbcType="INTEGER" />
+		<result column="DEPARTMENT" property="department" jdbcType="VARCHAR" />
+		<result column="STAFF_ROLE" property="staffRole" jdbcType="INTEGER" />
+		<result column="STAFF_STATE" property="staffState" jdbcType="INTEGER" />
+		<result column="COMMUNITY_ID" property="communityId" jdbcType="VARCHAR" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs"
+		type="cn.com.innodev.pdp.community.persistence.object.ComProjectStaffDO"
+		extends="BaseResultMap">
+		<result column="CONTENT" property="content" jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, ACCOUNT_NAME, ACCOUNT_PASSWORD, FULL_NAME, EMAIL, MOBILE1, MOBILE2,
+		MOBILE3,
+		MOBILE4, SYS_INSERT_TIME, SYS_UPDATE_TIME, LAST_LOGIN_TIME,
+		HEAD_IMAGE_FILE_ID, HEAD_IMAGE_FILE_EXT,
+		HEAD_IMAGE_FILE_WIDTH, HEAD_IMAGE_FILE_HEIGHT, DEPARTMENT, STAFF_ROLE, STAFF_STATE,
+		COMMUNITY_ID
+	</sql>
+	<sql id="Blob_Column_List">
+		CONTENT
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from com_project_staff
+		where ID = #{id,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from com_project_staff
+		where ID = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectStaffDO"
+		useGeneratedKeys="true" keyProperty="id">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			select LAST_INSERT_ID() as id
+		</selectKey>
+		insert into com_project_staff (ID, ACCOUNT_NAME, ACCOUNT_PASSWORD,
+		FULL_NAME, EMAIL, MOBILE1,
+		MOBILE2, MOBILE3, MOBILE4,
+		SYS_INSERT_TIME, SYS_UPDATE_TIME, LAST_LOGIN_TIME,
+		HEAD_IMAGE_FILE_ID, HEAD_IMAGE_FILE_EXT, HEAD_IMAGE_FILE_WIDTH,
+		HEAD_IMAGE_FILE_HEIGHT, DEPARTMENT, STAFF_ROLE,
+		STAFF_STATE, COMMUNITY_ID, CONTENT
+		)
+		values (#{id,jdbcType=INTEGER}, #{accountName,jdbcType=VARCHAR},
+		#{accountPassword,jdbcType=VARCHAR},
+		#{fullName,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{mobile1,jdbcType=VARCHAR},
+		#{mobile2,jdbcType=VARCHAR}, #{mobile3,jdbcType=VARCHAR},
+		#{mobile4,jdbcType=VARCHAR},
+		#{sysInsertTime,jdbcType=TIMESTAMP}, #{sysUpdateTime,jdbcType=TIMESTAMP},
+		#{lastLoginTime,jdbcType=TIMESTAMP},
+		#{headImageFileId,jdbcType=VARCHAR},
+		#{headImageFileExt,jdbcType=VARCHAR},
+		#{headImageFileWidth,jdbcType=INTEGER},
+		#{headImageFileHeight,jdbcType=INTEGER},
+		#{department,jdbcType=VARCHAR}, #{staffRole,jdbcType=INTEGER},
+		#{staffState,jdbcType=INTEGER}, #{communityId,jdbcType=VARCHAR},
+		#{content,jdbcType=LONGVARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectStaffDO">
+		insert into com_project_staff
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="accountName != null">
+				ACCOUNT_NAME,
+			</if>
+			<if test="accountPassword != null">
+				ACCOUNT_PASSWORD,
+			</if>
+			<if test="fullName != null">
+				FULL_NAME,
+			</if>
+			<if test="email != null">
+				EMAIL,
+			</if>
+			<if test="mobile1 != null">
+				MOBILE1,
+			</if>
+			<if test="mobile2 != null">
+				MOBILE2,
+			</if>
+			<if test="mobile3 != null">
+				MOBILE3,
+			</if>
+			<if test="mobile4 != null">
+				MOBILE4,
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME,
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME,
+			</if>
+			<if test="lastLoginTime != null">
+				LAST_LOGIN_TIME,
+			</if>
+			<if test="headImageFileId != null">
+				HEAD_IMAGE_FILE_ID,
+			</if>
+			<if test="headImageFileExt != null">
+				HEAD_IMAGE_FILE_EXT,
+			</if>
+			<if test="headImageFileWidth != null">
+				HEAD_IMAGE_FILE_WIDTH,
+			</if>
+			<if test="headImageFileHeight != null">
+				HEAD_IMAGE_FILE_HEIGHT,
+			</if>
+			<if test="department != null">
+				DEPARTMENT,
+			</if>
+			<if test="staffRole != null">
+				STAFF_ROLE,
+			</if>
+			<if test="staffState != null">
+				STAFF_STATE,
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID,
+			</if>
+			<if test="content != null">
+				CONTENT,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="accountName != null">
+				#{accountName,jdbcType=VARCHAR},
+			</if>
+			<if test="accountPassword != null">
+				#{accountPassword,jdbcType=VARCHAR},
+			</if>
+			<if test="fullName != null">
+				#{fullName,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				#{email,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile1 != null">
+				#{mobile1,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile2 != null">
+				#{mobile2,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile3 != null">
+				#{mobile3,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile4 != null">
+				#{mobile4,jdbcType=VARCHAR},
+			</if>
+			<if test="sysInsertTime != null">
+				#{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				#{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lastLoginTime != null">
+				#{lastLoginTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="headImageFileId != null">
+				#{headImageFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="headImageFileExt != null">
+				#{headImageFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="headImageFileWidth != null">
+				#{headImageFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="headImageFileHeight != null">
+				#{headImageFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="department != null">
+				#{department,jdbcType=VARCHAR},
+			</if>
+			<if test="staffRole != null">
+				#{staffRole,jdbcType=INTEGER},
+			</if>
+			<if test="staffState != null">
+				#{staffState,jdbcType=INTEGER},
+			</if>
+			<if test="communityId != null">
+				#{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectStaffDO">
+		update com_project_staff
+		<set>
+			<if test="accountName != null">
+				ACCOUNT_NAME = #{accountName,jdbcType=VARCHAR},
+			</if>
+			<if test="accountPassword != null">
+				ACCOUNT_PASSWORD = #{accountPassword,jdbcType=VARCHAR},
+			</if>
+			<if test="fullName != null">
+				FULL_NAME = #{fullName,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				EMAIL = #{email,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile1 != null">
+				MOBILE1 = #{mobile1,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile2 != null">
+				MOBILE2 = #{mobile2,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile3 != null">
+				MOBILE3 = #{mobile3,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile4 != null">
+				MOBILE4 = #{mobile4,jdbcType=VARCHAR},
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lastLoginTime != null">
+				LAST_LOGIN_TIME = #{lastLoginTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="headImageFileId != null">
+				HEAD_IMAGE_FILE_ID = #{headImageFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="headImageFileExt != null">
+				HEAD_IMAGE_FILE_EXT = #{headImageFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="headImageFileWidth != null">
+				HEAD_IMAGE_FILE_WIDTH = #{headImageFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="headImageFileHeight != null">
+				HEAD_IMAGE_FILE_HEIGHT = #{headImageFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="department != null">
+				DEPARTMENT = #{department,jdbcType=VARCHAR},
+			</if>
+			<if test="staffRole != null">
+				STAFF_ROLE = #{staffRole,jdbcType=INTEGER},
+			</if>
+			<if test="staffState != null">
+				STAFF_STATE = #{staffState,jdbcType=INTEGER},
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				CONTENT = #{content,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKeyWithBLOBs"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectStaffDO">
+		update com_project_staff
+		set ACCOUNT_NAME = #{accountName,jdbcType=VARCHAR},
+		ACCOUNT_PASSWORD = #{accountPassword,jdbcType=VARCHAR},
+		FULL_NAME = #{fullName,jdbcType=VARCHAR},
+		EMAIL = #{email,jdbcType=VARCHAR},
+		MOBILE1 = #{mobile1,jdbcType=VARCHAR},
+		MOBILE2 = #{mobile2,jdbcType=VARCHAR},
+		MOBILE3 = #{mobile3,jdbcType=VARCHAR},
+		MOBILE4 = #{mobile4,jdbcType=VARCHAR},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		LAST_LOGIN_TIME = #{lastLoginTime,jdbcType=TIMESTAMP},
+		HEAD_IMAGE_FILE_ID = #{headImageFileId,jdbcType=VARCHAR},
+		HEAD_IMAGE_FILE_EXT = #{headImageFileExt,jdbcType=VARCHAR},
+		HEAD_IMAGE_FILE_WIDTH = #{headImageFileWidth,jdbcType=INTEGER},
+		HEAD_IMAGE_FILE_HEIGHT = #{headImageFileHeight,jdbcType=INTEGER},
+		DEPARTMENT = #{department,jdbcType=VARCHAR},
+		STAFF_ROLE = #{staffRole,jdbcType=INTEGER},
+		STAFF_STATE = #{staffState,jdbcType=INTEGER},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+		CONTENT = #{content,jdbcType=LONGVARCHAR}
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectStaffDO">
+		update com_project_staff
+		set ACCOUNT_NAME = #{accountName,jdbcType=VARCHAR},
+		ACCOUNT_PASSWORD = #{accountPassword,jdbcType=VARCHAR},
+		FULL_NAME = #{fullName,jdbcType=VARCHAR},
+		EMAIL = #{email,jdbcType=VARCHAR},
+		MOBILE1 = #{mobile1,jdbcType=VARCHAR},
+		MOBILE2 = #{mobile2,jdbcType=VARCHAR},
+		MOBILE3 = #{mobile3,jdbcType=VARCHAR},
+		MOBILE4 = #{mobile4,jdbcType=VARCHAR},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		LAST_LOGIN_TIME = #{lastLoginTime,jdbcType=TIMESTAMP},
+		HEAD_IMAGE_FILE_ID = #{headImageFileId,jdbcType=VARCHAR},
+		HEAD_IMAGE_FILE_EXT = #{headImageFileExt,jdbcType=VARCHAR},
+		HEAD_IMAGE_FILE_WIDTH = #{headImageFileWidth,jdbcType=INTEGER},
+		HEAD_IMAGE_FILE_HEIGHT = #{headImageFileHeight,jdbcType=INTEGER},
+		DEPARTMENT = #{department,jdbcType=VARCHAR},
+		STAFF_ROLE = #{staffRole,jdbcType=INTEGER},
+		STAFF_STATE = #{staffState,jdbcType=INTEGER},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<select id="selectByAccountName" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT <include refid="Base_Column_List"/>,<include refid="Blob_Column_List"/> FROM 
+		com_project_staff
+		WHERE ACCOUNT_NAME = #{accountName,jdbcType=VARCHAR}
+	</select>
+	<update id="updateHead" parameterType="map">
+		update com_project_staff
+		set 
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		HEAD_IMAGE_FILE_ID = #{headImageFileId,jdbcType=VARCHAR},
+		HEAD_IMAGE_FILE_EXT = #{headImageFileExt,jdbcType=VARCHAR},
+		HEAD_IMAGE_FILE_WIDTH = #{headImageFileWidth,jdbcType=INTEGER},
+		HEAD_IMAGE_FILE_HEIGHT = #{headImageFileHeight,jdbcType=INTEGER},
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<select id="selectBy_CommunityId_StaffRole"  parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT <include refid="Base_Column_List"/>,<include refid="Blob_Column_List"/> 
+		FROM 
+		com_project_staff 
+		<where>
+			<if test="communityId != null">
+			AND COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+			</if>
+			<if test="staffRole != null">
+			AND STAFF_ROLE = #{staffRole,jdbcType=INTEGER}
+			</if>
+		</where>
+		ORDER BY SYS_INSERT_TIME DESC 
+	</select>
+	<select id="selectCountBy_CommunityId_StaffRole"  parameterType="map" resultType="integer">
+		SELECT COUNT(0) AS C 
+		FROM 
+		com_project_staff 
+		<where>
+			<if test="communityId != null">
+			AND COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+			</if>
+			<if test="staffRole != null">
+			AND STAFF_ROLE = #{staffRole,jdbcType=INTEGER}
+			</if>
+		</where>
+	</select>
+</mapper>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="cn.com.innodev.pdp.community.persistence.ComCommunityImageDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.community.persistence.object.ComCommunityImageDO">
+		<id column="ID" property="id" jdbcType="VARCHAR" />
+		<result column="TITLE" property="title" jdbcType="VARCHAR" />
+		<result column="ALBUM_TYPE" property="albumType" jdbcType="INTEGER" />
+		<result column="FLOOR_PLAN_TYPE" property="floorPlanType"
+			jdbcType="INTEGER" />
+		<result column="IMAGE_FILE_ID" property="imageFileId" jdbcType="VARCHAR" />
+		<result column="IMAGE_FILE_EXT" property="imageFileExt"
+			jdbcType="VARCHAR" />
+		<result column="IMAGE_FILE_WIDTH" property="imageFileWidth"
+			jdbcType="INTEGER" />
+		<result column="IMAGE_FILE_HEIGHT" property="imageFileHeight"
+			jdbcType="INTEGER" />
+		<result column="SYS_INSERT_TIME" property="sysInsertTime"
+			jdbcType="TIMESTAMP" />
+		<result column="SYS_UPDATE_TIME" property="sysUpdateTime"
+			jdbcType="TIMESTAMP" />
+		<result column="COMMUNITY_ID" property="communityId" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, TITLE, ALBUM_TYPE, FLOOR_PLAN_TYPE, IMAGE_FILE_ID, IMAGE_FILE_EXT,
+		IMAGE_FILE_WIDTH,
+		IMAGE_FILE_HEIGHT, SYS_INSERT_TIME, SYS_UPDATE_TIME, COMMUNITY_ID
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from com_community_image
+		where ID = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from com_community_image
+		where ID = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityImageDO">
+		insert into com_community_image (ID, TITLE, ALBUM_TYPE,
+		FLOOR_PLAN_TYPE, IMAGE_FILE_ID, IMAGE_FILE_EXT,
+		IMAGE_FILE_WIDTH, IMAGE_FILE_HEIGHT, SYS_INSERT_TIME,
+		SYS_UPDATE_TIME, COMMUNITY_ID)
+		values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR},
+		#{albumType,jdbcType=INTEGER},
+		#{floorPlanType,jdbcType=INTEGER}, #{imageFileId,jdbcType=VARCHAR}, #{imageFileExt,jdbcType=VARCHAR},
+		#{imageFileWidth,jdbcType=INTEGER},
+		#{imageFileHeight,jdbcType=INTEGER},
+		#{sysInsertTime,jdbcType=TIMESTAMP},
+		#{sysUpdateTime,jdbcType=TIMESTAMP}, #{communityId,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityImageDO">
+		insert into com_community_image
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="title != null">
+				TITLE,
+			</if>
+			<if test="albumType != null">
+				ALBUM_TYPE,
+			</if>
+			<if test="floorPlanType != null">
+				FLOOR_PLAN_TYPE,
+			</if>
+			<if test="imageFileId != null">
+				IMAGE_FILE_ID,
+			</if>
+			<if test="imageFileExt != null">
+				IMAGE_FILE_EXT,
+			</if>
+			<if test="imageFileWidth != null">
+				IMAGE_FILE_WIDTH,
+			</if>
+			<if test="imageFileHeight != null">
+				IMAGE_FILE_HEIGHT,
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME,
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME,
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="title != null">
+				#{title,jdbcType=VARCHAR},
+			</if>
+			<if test="albumType != null">
+				#{albumType,jdbcType=INTEGER},
+			</if>
+			<if test="floorPlanType != null">
+				#{floorPlanType,jdbcType=INTEGER},
+			</if>
+			<if test="imageFileId != null">
+				#{imageFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="imageFileExt != null">
+				#{imageFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="imageFileWidth != null">
+				#{imageFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="imageFileHeight != null">
+				#{imageFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="sysInsertTime != null">
+				#{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				#{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="communityId != null">
+				#{communityId,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityImageDO">
+		update com_community_image
+		<set>
+			<if test="title != null">
+				TITLE = #{title,jdbcType=VARCHAR},
+			</if>
+			<if test="albumType != null">
+				ALBUM_TYPE = #{albumType,jdbcType=INTEGER},
+			</if>
+			<if test="floorPlanType != null">
+				FLOOR_PLAN_TYPE = #{floorPlanType,jdbcType=INTEGER},
+			</if>
+			<if test="imageFileId != null">
+				IMAGE_FILE_ID = #{imageFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="imageFileExt != null">
+				IMAGE_FILE_EXT = #{imageFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="imageFileWidth != null">
+				IMAGE_FILE_WIDTH = #{imageFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="imageFileHeight != null">
+				IMAGE_FILE_HEIGHT = #{imageFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityImageDO">
+		update com_community_image
+		set TITLE = #{title,jdbcType=VARCHAR},
+		ALBUM_TYPE = #{albumType,jdbcType=INTEGER},
+		FLOOR_PLAN_TYPE = #{floorPlanType,jdbcType=INTEGER},
+		IMAGE_FILE_ID = #{imageFileId,jdbcType=VARCHAR},
+		IMAGE_FILE_EXT = #{imageFileExt,jdbcType=VARCHAR},
+		IMAGE_FILE_WIDTH = #{imageFileWidth,jdbcType=INTEGER},
+		IMAGE_FILE_HEIGHT = #{imageFileHeight,jdbcType=INTEGER},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<select id="selectByCommunityId" parameterType="map" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List"/> FROM 
+		com_community_image 
+		WHERE 
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR} 
+		ORDER BY SYS_INSERT_TIME DESC 
+	</select>
+</mapper>

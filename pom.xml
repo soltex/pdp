@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.com.innodev</groupId>
+	<artifactId>innodev-pdp-module</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<name>vanstone-pdp-module</name>
+	<url>http://maven.apache.org</url>
+	
+	<modules>
+		<module>document</module>
+		<module>innodev-pdp-core</module>
+		<module>innodev-pdp-admin-webapp</module>
+		<module>innodev-example</module>
+		<module>innodev-pdp-projectcompany-webapp</module>
+		<module>innodev-pdp-webservice-webapp</module>
+		<module>innodev-pdp-weixin-webapp</module>
+  	</modules>
+	<distributionManagement>
+		<repository>
+			<id>sagacityidea-release</id>
+			<name>sagacityidea-release</name>
+			<url>http://repo.sagacityidea.com:8081/nexus/content/repositories/sagacityidea-release/</url>
+		</repository>
+	</distributionManagement>
+	<properties>
+		<innodev.pdp.version>1.0</innodev.pdp.version>
+		<vanstone.components.version>1.2.7</vanstone.components.version>
+		<vanstone.centralserver.version>1.0.7</vanstone.centralserver.version>
+		<vanstone.img.server.version>1.0.1</vanstone.img.server.version>
+	</properties>
+	<dependencies>
+		
+	</dependencies>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<target>1.6</target>
+						<source>1.6</source>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<configuration>
+						<archive>
+							<addMavenDescriptor>false</addMavenDescriptor>
+						</archive>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+				<version>2.3.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<excludes>
+						<exclude>**/*.properties</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

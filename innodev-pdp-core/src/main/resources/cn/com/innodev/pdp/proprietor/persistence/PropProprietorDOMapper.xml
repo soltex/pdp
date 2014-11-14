@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="cn.com.innodev.pdp.proprietor.persistence.PropProprietorDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorDO">
+		<id column="ID" property="id" jdbcType="VARCHAR" />
+		<result column="MOBILE" property="mobile" jdbcType="VARCHAR" />
+		<result column="EMAIL" property="email" jdbcType="VARCHAR" />
+		<result column="FULL_NAME" property="fullName" jdbcType="VARCHAR" />
+		<result column="NICK_NAME" property="nickName" jdbcType="VARCHAR" />
+		<result column="PWD" property="pwd" jdbcType="VARCHAR" />
+		<result column="WEIXIN_OPENID" property="weixinOpenid"
+			jdbcType="VARCHAR" />
+		<result column="GENDER" property="gender" jdbcType="INTEGER" />
+		<result column="PROFESSION" property="profession" jdbcType="VARCHAR" />
+		<result column="HEADER_FILE_ID" property="headerFileId"
+			jdbcType="VARCHAR" />
+		<result column="HEADER_FILE_EXT" property="headerFileExt"
+			jdbcType="VARCHAR" />
+		<result column="HEADER_FILE_WIDTH" property="headerFileWidth"
+			jdbcType="INTEGER" />
+		<result column="HEADER_FILE_HEIGHT" property="headerFileHeight"
+			jdbcType="INTEGER" />
+		<result column="PROP_STATE" property="propState" jdbcType="INTEGER" />
+		<result column="SYS_INSERT_TIME" property="sysInsertTime"
+			jdbcType="TIMESTAMP" />
+		<result column="SYS_UPDATE_TIME" property="sysUpdateTime"
+			jdbcType="TIMESTAMP" />
+		<result column="COMMUNITY_ID" property="communityId" jdbcType="VARCHAR" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs"
+		type="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorDOWithBLOBs"
+		extends="BaseResultMap">
+		<result column="INTEREST" property="interest" jdbcType="LONGVARCHAR" />
+		<result column="ROOMIDS" property="roomids" jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, MOBILE, EMAIL, FULL_NAME, NICK_NAME, PWD, WEIXIN_OPENID, GENDER,
+		PROFESSION,
+		HEADER_FILE_ID, HEADER_FILE_EXT, HEADER_FILE_WIDTH, HEADER_FILE_HEIGHT, PROP_STATE,
+		SYS_INSERT_TIME, SYS_UPDATE_TIME, COMMUNITY_ID
+	</sql>
+	<sql id="Blob_Column_List">
+		INTEREST, ROOMIDS
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from prop_proprietor
+		where ID = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from prop_proprietor
+		where ID = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorDOWithBLOBs">
+		insert into prop_proprietor (ID, MOBILE, EMAIL,
+		FULL_NAME, NICK_NAME, PWD,
+		WEIXIN_OPENID, GENDER, PROFESSION,
+		HEADER_FILE_ID, HEADER_FILE_EXT, HEADER_FILE_WIDTH,
+		HEADER_FILE_HEIGHT, PROP_STATE, SYS_INSERT_TIME,
+		SYS_UPDATE_TIME, COMMUNITY_ID, INTEREST,
+		ROOMIDS)
+		values (#{id,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR},
+		#{email,jdbcType=VARCHAR},
+		#{fullName,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR},
+		#{weixinOpenid,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER},
+		#{profession,jdbcType=VARCHAR},
+		#{headerFileId,jdbcType=VARCHAR}, #{headerFileExt,jdbcType=VARCHAR},
+		#{headerFileWidth,jdbcType=INTEGER},
+		#{headerFileHeight,jdbcType=INTEGER}, #{propState,jdbcType=INTEGER},
+		#{sysInsertTime,jdbcType=TIMESTAMP},
+		#{sysUpdateTime,jdbcType=TIMESTAMP}, #{communityId,jdbcType=VARCHAR},
+		#{interest,jdbcType=LONGVARCHAR},
+		#{roomids,jdbcType=LONGVARCHAR})
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorDOWithBLOBs">
+		insert into prop_proprietor
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="mobile != null">
+				MOBILE,
+			</if>
+			<if test="email != null">
+				EMAIL,
+			</if>
+			<if test="fullName != null">
+				FULL_NAME,
+			</if>
+			<if test="nickName != null">
+				NICK_NAME,
+			</if>
+			<if test="pwd != null">
+				PWD,
+			</if>
+			<if test="weixinOpenid != null">
+				WEIXIN_OPENID,
+			</if>
+			<if test="gender != null">
+				GENDER,
+			</if>
+			<if test="profession != null">
+				PROFESSION,
+			</if>
+			<if test="headerFileId != null">
+				HEADER_FILE_ID,
+			</if>
+			<if test="headerFileExt != null">
+				HEADER_FILE_EXT,
+			</if>
+			<if test="headerFileWidth != null">
+				HEADER_FILE_WIDTH,
+			</if>
+			<if test="headerFileHeight != null">
+				HEADER_FILE_HEIGHT,
+			</if>
+			<if test="propState != null">
+				PROP_STATE,
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME,
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME,
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID,
+			</if>
+			<if test="interest != null">
+				INTEREST,
+			</if>
+			<if test="roomids != null">
+				ROOMIDS,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="mobile != null">
+				#{mobile,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				#{email,jdbcType=VARCHAR},
+			</if>
+			<if test="fullName != null">
+				#{fullName,jdbcType=VARCHAR},
+			</if>
+			<if test="nickName != null">
+				#{nickName,jdbcType=VARCHAR},
+			</if>
+			<if test="pwd != null">
+				#{pwd,jdbcType=VARCHAR},
+			</if>
+			<if test="weixinOpenid != null">
+				#{weixinOpenid,jdbcType=VARCHAR},
+			</if>
+			<if test="gender != null">
+				#{gender,jdbcType=INTEGER},
+			</if>
+			<if test="profession != null">
+				#{profession,jdbcType=VARCHAR},
+			</if>
+			<if test="headerFileId != null">
+				#{headerFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="headerFileExt != null">
+				#{headerFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="headerFileWidth != null">
+				#{headerFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="headerFileHeight != null">
+				#{headerFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="propState != null">
+				#{propState,jdbcType=INTEGER},
+			</if>
+			<if test="sysInsertTime != null">
+				#{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				#{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="communityId != null">
+				#{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="interest != null">
+				#{interest,jdbcType=LONGVARCHAR},
+			</if>
+			<if test="roomids != null">
+				#{roomids,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorDOWithBLOBs">
+		update prop_proprietor
+		<set>
+			<if test="mobile != null">
+				MOBILE = #{mobile,jdbcType=VARCHAR},
+			</if>
+			<if test="email != null">
+				EMAIL = #{email,jdbcType=VARCHAR},
+			</if>
+			<if test="fullName != null">
+				FULL_NAME = #{fullName,jdbcType=VARCHAR},
+			</if>
+			<if test="nickName != null">
+				NICK_NAME = #{nickName,jdbcType=VARCHAR},
+			</if>
+			<if test="pwd != null">
+				PWD = #{pwd,jdbcType=VARCHAR},
+			</if>
+			<if test="weixinOpenid != null">
+				WEIXIN_OPENID = #{weixinOpenid,jdbcType=VARCHAR},
+			</if>
+			<if test="gender != null">
+				GENDER = #{gender,jdbcType=INTEGER},
+			</if>
+			<if test="profession != null">
+				PROFESSION = #{profession,jdbcType=VARCHAR},
+			</if>
+			<if test="headerFileId != null">
+				HEADER_FILE_ID = #{headerFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="headerFileExt != null">
+				HEADER_FILE_EXT = #{headerFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="headerFileWidth != null">
+				HEADER_FILE_WIDTH = #{headerFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="headerFileHeight != null">
+				HEADER_FILE_HEIGHT = #{headerFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="propState != null">
+				PROP_STATE = #{propState,jdbcType=INTEGER},
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="communityId != null">
+				COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="interest != null">
+				INTEREST = #{interest,jdbcType=LONGVARCHAR},
+			</if>
+			<if test="roomids != null">
+				ROOMIDS = #{roomids,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKeyWithBLOBs"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorDOWithBLOBs">
+		update prop_proprietor
+		set MOBILE = #{mobile,jdbcType=VARCHAR},
+		EMAIL = #{email,jdbcType=VARCHAR},
+		FULL_NAME = #{fullName,jdbcType=VARCHAR},
+		NICK_NAME = #{nickName,jdbcType=VARCHAR},
+		PWD = #{pwd,jdbcType=VARCHAR},
+		WEIXIN_OPENID = #{weixinOpenid,jdbcType=VARCHAR},
+		GENDER = #{gender,jdbcType=INTEGER},
+		PROFESSION = #{profession,jdbcType=VARCHAR},
+		HEADER_FILE_ID = #{headerFileId,jdbcType=VARCHAR},
+		HEADER_FILE_EXT = #{headerFileExt,jdbcType=VARCHAR},
+		HEADER_FILE_WIDTH = #{headerFileWidth,jdbcType=INTEGER},
+		HEADER_FILE_HEIGHT = #{headerFileHeight,jdbcType=INTEGER},
+		PROP_STATE = #{propState,jdbcType=INTEGER},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR},
+		INTEREST = #{interest,jdbcType=LONGVARCHAR},
+		ROOMIDS = #{roomids,jdbcType=LONGVARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropProprietorDO">
+		update prop_proprietor
+		set MOBILE = #{mobile,jdbcType=VARCHAR},
+		EMAIL = #{email,jdbcType=VARCHAR},
+		FULL_NAME = #{fullName,jdbcType=VARCHAR},
+		NICK_NAME = #{nickName,jdbcType=VARCHAR},
+		PWD = #{pwd,jdbcType=VARCHAR},
+		WEIXIN_OPENID = #{weixinOpenid,jdbcType=VARCHAR},
+		GENDER = #{gender,jdbcType=INTEGER},
+		PROFESSION = #{profession,jdbcType=VARCHAR},
+		HEADER_FILE_ID = #{headerFileId,jdbcType=VARCHAR},
+		HEADER_FILE_EXT = #{headerFileExt,jdbcType=VARCHAR},
+		HEADER_FILE_WIDTH = #{headerFileWidth,jdbcType=INTEGER},
+		HEADER_FILE_HEIGHT = #{headerFileHeight,jdbcType=INTEGER},
+		PROP_STATE = #{propState,jdbcType=INTEGER},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateHead" parameterType="map">
+		update prop_proprietor
+		set
+		HEADER_FILE_ID = #{headerFileId,jdbcType=VARCHAR},
+		HEADER_FILE_EXT = #{headerFileExt,jdbcType=VARCHAR},
+		HEADER_FILE_WIDTH = #{headerFileWidth,jdbcType=INTEGER},
+		HEADER_FILE_HEIGHT = #{headerFileHeight,jdbcType=INTEGER},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<select id="selectByMobile" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		FROM
+		prop_proprietor
+		WHERE
+		MOBILE = #{mobile,jdbcType=VARCHAR}
+	</select>
+	<select id="selectByOpenId" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		FROM
+		prop_proprietor
+		WHERE
+		WEIXIN_OPENID = #{openId,jdbcType=VARCHAR}
+	</select>
+	<select id="selectByMobile_Notself" parameterType="map"
+		resultMap="ResultMapWithBLOBs">
+		SELECT
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		FROM
+		prop_proprietor
+		WHERE
+		ID &lt;&gt; #{id,jdbcType=VARCHAR}
+		AND
+		MOBILE = #{mobile,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="selectByIds" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT <include refid="Base_Column_List"/>,<include refid="Blob_Column_List"/>
+		FROM 
+		prop_proprietor 
+		WHERE 
+		ID IN  
+		<foreach collection="ids" open="(" close=")" item="id" separator="," >
+			#{id,jdbcType=VARCHAR}
+		</foreach>
+	</select>
+</mapper>

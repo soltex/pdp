@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>接口模式演示程序</title>
+<link href="../share/api_style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #CCCCCC;
+}
+th{ font-size:10.5pt;background-color=#FFFFEA ; font-weight: 600; color: #FF9933}
+-->
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="left" bgcolor="#00314F"><img src="../images/api_01.jpg" width="713" height="87" /></td>
+		<td align="left" bgcolor="#00314F">
+			<table width="100%" height="80" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="right" style="padding-right:20px;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="color:#FFFFFF;padding-right:20px;" align="right"><strong>时代互联接口模式源程序 Version 2.4</strong></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="25" background="../images/api_03.jpg"></td>
+		<td bgcolor="#000000">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="186" rowspan="2" valign="top" bgcolor="#787878">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="20" bgcolor="#000000"></td>
+				</tr>
+				<tr>
+					<td>
+						<ul  class="class""menu_link">
+							<li ><a href="../" class="menu_hot"><font color="#FF9900">返回演示首页</font></a> </li>
+							<li><a href="../doc/config.html" class="menu">接口模式说明</a> </li>
+							<li><a href="../doc/func.html"class="menu">接口函数说明</a> </li>
+							<li><a href="../smsdemo/smsconf.jsp"class="menu">SMS接口配置</a> </li>
+							<li><a href="../smsdemo/smssend.jsp"class="menu">发送短信</a> </li>
+							<li><a href="../smsdemo/smsaccount.jsp"class="menu">短信用户余额查询</a> </li>
+							<li><a href="../smsdemo/smsreceive.jsp"class="menu">回复短信查询</a> </li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+		<td valign="top" bgcolor="#FFFFFF" style="padding:1px 0px 1px 1px;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="left" bgcolor="#030504"><img src="../images/api_07.jpg" width="819" height="183" /></td>
+				</tr>
+				<tr>
+					<td align="left"><img src="../images/api_08.jpg" width="819" height="12" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" style="padding:5px 5px 10px 10px;" bgcolor="#FFFFFF">
+			<table width="90%"  border="1" align="center" cellpadding="1" cellspacing="0" bordercolorlight="#FFFFFF" bordercolor="#F5EEE8">
+				<tr>
+					<td scope="row">
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<th  height="30" background="../images/bg.gif" class="text_blue14"> = 域名接口模式函数说明 =</th>
+							</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="clear" scope="row">　　为方便大家使用，我们还提供了部分常用函数供大家调用，这些函数作为接口类的基类函数在<b><font color="#FF00FF">WEB-INF/lib/smsapi.jar</font></b>文件下的已经写好,用以实现“短信操作”的接口组件:SMS.class （com.todaynic.client.mobile 包），这个组件由JAVA写并编译而成，操作组件除了现有的以外，其它的将会陆续发布，请留意我们的最新发布信息。</td>
+							</tr>
+							<tr>
+								<td class="clear" scope="row">
+									<table width="95%"  border="0" align="center" cellpadding="10" cellspacing="0" class="dotback">
+										<tr>
+											<td scope="row"> <strong>下面以注册短信的返回信息（XML格式）来具体说明这些函数的用法。</strong><br>
+												&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
+												&lt;scp xmlns:contact=&quot;urn:todaynic.com:contact&quot; xmlns:host=&quot;urn:todaynic.<br>
+												com:host&quot; xmlns:domain=&quot;urn:todaynic.com:domain&quot; xmlns:registrant=&quot;urn:todaynic.com:registrant&quot;&gt;<br>
+												&nbsp; &nbsp; &lt;response&gt;<br>
+												&nbsp; &nbsp; &nbsp; &lt;result code=&quot;2000&quot;&gt;<br>
+												&nbsp; &nbsp; &nbsp; &nbsp; &lt;msg&gt;Command complateted successfully&lt;/msg&gt;<br>
+												&nbsp; &nbsp; &nbsp; &lt;/result&gt;<br>
+												&nbsp; &nbsp; &nbsp; &lt;resdata&gt;<br>
+												&nbsp; &nbsp; &nbsp; &nbsp; &lt;id&gt;42683&lt;/id&gt;<br>
+												&nbsp; &nbsp; &nbsp; &nbsp; &lt;prod&gt;100&lt;/prod&gt;<br>
+												&nbsp; &nbsp; &nbsp; &nbsp; &lt;password&gt;111111&lt;/password&gt;<br>
+												&nbsp; &nbsp; &nbsp; &nbsp; &lt;space&gt;100&lt;/space&gt;<br>
+												&nbsp; &nbsp; &nbsp; &nbsp; &lt;dtcreate&gt;2008-1-7 15:33:11&lt;/dtcreate&gt;<br>
+												&nbsp; &nbsp; &nbsp; &nbsp; &lt;dtexp&gt;2008-1-7&lt;/dtexp&gt;<br>
+												&nbsp; &nbsp; &nbsp; &lt;/resdata&gt;<br>
+												&nbsp; &nbsp; &lt;/response&gt;<br>
+												&nbsp; &nbsp; &lt;security&gt;<br>
+												&nbsp; &nbsp; &nbsp; &lt;sltrid&gt;1112859191704&lt;/sltrid&gt;<br>
+												&nbsp; &nbsp; &lt;/security&gt;<br>
+												&lt;/scp&gt;<font color="#FF00FF"><font color="#FF00FF"><font color="#FF00FF">　　　 </font></font></font></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td height="25" align="left"background="../images/bg.gif" class="text_blue14" scope="row"><span class="white"><strong>　一、getCode()方法 继承于 SendInfoXML</strong></span></td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row" ><font color="#FF00FF">
+									<dd>说明： <span class="clear"> <span class="style5">在执行SMS的'短信操作'方法后调用该方法</span> </span> <br>
+									<dd>如： String code = sms.getCode(); <br>
+										<br>
+									</font>
+									<dd>使用该方法可以得到四位数的ｃｏｄｅ信息。不同的数字代表不同不同的含义，具体如下:
+										<table width="95%"  border="0" align="center" cellpadding="10" cellspacing="0" class="dotback">
+											<tr>
+												<td scope="row">2000 &quot;Command complateted successfully&quot;<br>
+													3000 &quot;Datebase error&quot;//数据库错误(插入\删除等)<br>
+													4000 &quot;Client error&quot;//客户未知错误<br>
+													4001 &quot;Xml parse error&quot;//xml错误<br>
+													4002 &quot;Authorization error&quot;//授权错误(用户不存在、密码错误、权限不足等)<br>
+													4003 &quot;No data post to server&quot;<br>
+													4004 &quot;Object does not exist&quot;//函数不存在<br>
+													4300 &quot;Account error&quot;//财务错误<br>
+													4400 &quot;Parameter error&quot;//参数错误<br>
+													5000 &quot;Server error&quot;<br>
+													5001 &quot;Unable connet to remote server&quot;<br>
+													5002 &quot;Server no data return&quot;<br>
+													5003 &quot;Server other error&quot;<br>
+													6000 &quot;optation error&quot;//操作错误，如不能添加、删除文件等</td>
+											</tr>
+										</table>
+										<br>
+								</td>
+							</tr>
+							<tr>
+								<td height="25" background="../images/bg.gif" class="text_blue14"><strong class="white">　二、<strong>getMsg()方法 继承于 SendInfoXML </strong></td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row"><font color="#FF00FF"><span class="style5">
+									<dd>说明：在执行SMS的'短信操作'方法后调用该方法</dd>
+									<dd>如： String code = sms.getMsg();</dd>
+									<br/>
+									</span></font><br>
+									<dd>使用该方法可以得到&lt;msg&gt;＊＊＊＊＊＊&lt;/msg&gt;中＊＊＊＊＊的内容。
+									<dd><br>
+								</td>
+							</tr>
+							<tr>
+							<tr>
+								<td height="25" background="../images/bg.gif" class="text_blue14"><strong>　三、getRespData() 方法继承于SendInfoXML</strong></td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row"><font color="#FF00FF">
+									<dd>说明：在执行SMS的'短信操作'方法后调用该方法</dd>
+									<dd>如： Hashtable result = sms.getRespData();</dd>
+									</font><br>
+									<dd>使用该方法可以成功返回<font color="#FF00FF">'短信操作'</font>后返回的结果包。
+									<dd><br>
+								</td>
+							</tr>
+							<tr>
+								<td height="25" background="../images/bg.gif" class="text_blue14"><strong>　四、getRecieveXml()和 getSendXml() 方法继承于 SendInfoXML</strong></td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row"><font color="#FF00FF">
+									<dd>说明：在执行SMS的'短信操作'方法后调用该方法</dd>
+									<br>
+									<dd>如：</dd>
+									</font>
+									<dd>
+									<dd>&lt;%</dd>
+									</dd>
+									<dd>
+									<dd>......</dd>
+									</dd>
+									<dd>
+									<dd>
+									<dd><font color="red">String sms.getSendXml();</font></dd>
+									</dd>
+									</dd>
+									<br>
+									<dd>
+									<dd>
+									<dd><font color="red">String sms.getRecieveXml();</font></dd>
+									</dd>
+									</dd>
+									<br>
+									<dd>
+									<dd>.....</dd>
+									<br>
+									<dd>
+									<dd>%&gt;</dd>
+									</dd>
+									<br>
+									<br>
+									<font color="#FF00FF">
+									<dd>getSendXML()</dd>
+									</font> 该成员保存的是完整的发送xml信息。<br>
+									<font color="#FF00FF">
+									<dd>getRecieveXml()</dd>
+									</font> 该成员保存的是完整的返回XML信息。
+									<dd></dd>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td height="25"background="../images/bg.gif" class="text_blue14" ><strong>　五、SMS 类的'短信操作'方法:</strong></td>
+							</tr>
+							<tr>
+								<td align="left" class="clear" scope="row">
+									<table class="dotback" cellSpacing="0" cellPadding="10" width="95%" align="center" border="0">
+										<tr>
+											<td><strong>构造函数public SMS(Hashtable cfg)</strong><br>
+												<br>
+												参数说明:<br>
+												Hashtable cfg   用来传入服务器地址、服务器端口号、用户名、帐号<br>
+												构造时请按如下顺序将键值对放入Hashtable中去:<br>
+												键名:<br>
+												VCPSERVER      服务器地址<br>
+												VCPSVPORT	   服务器端口号<br>
+												VCPUSERID      用户帐号<br>
+												VCPPASSWD      密码 </td>
+										</tr>
+									</table>
+									<br>
+									<table class="dotback"  cellSpacing="0" cellPadding="10" width="95%" align="center" border="0">
+										<tr>
+											<td><strong>public boolean sendSMS(String mobile, String message, String time)</strong><br>
+												功能:发送短信<br>
+												参数:<br>
+												String mobile&nbsp;&nbsp; 要发送的手机号码(多个手机用&quot;,&quot;分隔。一次最多99个号码)<br>
+												String message&nbsp;&nbsp;&nbsp; -短信内容，一条短信最大长度，视所选择的通道而不同。(<font color="#FF0000">通道二：64个字；即时通道：50个字</font>)
+<br>
+												String time&nbsp;&nbsp;- 短信发送的时间(值为空或比当前时间小即是即时发送)。<br>
+												String apitype&nbsp;&nbsp; (<font color="#FF0000">通道选择 0：默认通道； 2：通道2； 3：即时通道</font>)<br>
+												返回值:是否成功 </td>
+										</tr>
+									</table>
+									<table class="dotback"  cellSpacing="0" cellPadding="10" width="95%" align="center"	border="0">
+										<tr>
+											<td><strong>public boolean infoSMSAccount()</strong><br>
+												功能:查询余额<br>
+												返回值:是否成功 </td>
+										</tr>
+									</table>
+									<br>
+									<table width="95%"  border="0" align="center" cellpadding="10" cellspacing="0" class="dotback">
+										<tr>
+											<td scope="row"> <strong>回复短信查询</strong><br>
+												&nbsp;&nbsp; <strong>public boolean readSMS()</strong><br>
+												&nbsp;&nbsp; 返回XML变量：<br>
+												&nbsp;&nbsp;&nbsp;&nbsp; id - 回复短信ID，大于0表示有回复短信，小于等于0表示失败<br>
+												&nbsp;&nbsp;&nbsp;&nbsp; src - 回复手机<br>
+												&nbsp;&nbsp;&nbsp;&nbsp; dst - 接收对象，参考值<br>
+												&nbsp;&nbsp;&nbsp;&nbsp; time - 回复时间，格式如0000-00-00 00:00:00<br>
+												&nbsp;&nbsp;&nbsp;&nbsp; message - 回复内容，为base64加密后的字符串，需解码<br>
+												&nbsp;&nbsp;&nbsp;&nbsp; err - 错误信息，成功则为空，参考值<br>
+												&nbsp;&nbsp;&nbsp;&nbsp;</td>
+										</tr>
+									</table>
+									<table width="95%"  border="0" align="center" cellpadding="1" cellspacing="0" bordercolorlight="#FFFFFF" bordercolor="#F5EEE8">
+										<tr>
+											<td align="center">
+												<input name="next" type="button" value="下一步，短信演示" onClick="location.href='../smsdemo/smsconf.jsp'" class="button_orange">
+												&nbsp;&nbsp;&nbsp;
+												<input name="return" type="button" value="上一步" class="buttonback" onClick="location.href='javascript:history.go(-1)'">
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="30" align="center" bgcolor="#00314F" style="color:#FFFFFF">时代互联 版权所有</td>
+	</tr>
+</table>
+</body>
+</html>

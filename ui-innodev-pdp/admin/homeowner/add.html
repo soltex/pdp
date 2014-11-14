@@ -1,0 +1,40 @@
+<ol class="breadcrumb">
+	<li><a href="main.html" data-history="index">首页</a></li>
+	<li><a href="homeowner/index.html" data-ajax="container">业主管理</a></li>
+	<li class="active">业主管理</li>
+</ol>
+<ul class="nav nav-tabs" role="tablist">
+	<li role="presentation"><a href="homeowner/index.html" data-ajax="container">业主管理</a></li>
+	<li role="presentation" class="active"><a href="javascript:">增加业主</a></li>
+</ul>
+
+<form role="form" class="required-validate" method="post" action="../doc/data/ajaxDone_300.html">
+	<div class="form-group">
+		<label for="exampleInputEmail1">Email address</label>
+		<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required="required">
+	</div>
+	<div class="form-group">
+		<label for="exampleInputPassword1">Password</label>
+		<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required="required">
+	</div>
+	<div class="form-group">
+		<label for="exampleInputGender">性别</label>
+		<select name="gender" id="exampleInputGender" required="required">
+			<option value="">请选择</option>
+			<option value="1">男</option>
+			<option value="0">女</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="exampleInputFile">File input</label>
+		<input type="file" id="exampleInputFile">
+		<p class="help-block">Example block-level help text here.</p>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox"> Check me out
+		</label>
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
+	<button type="reset" class="btn">Reset</button>
+</form>

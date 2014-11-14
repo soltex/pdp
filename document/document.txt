@@ -1,0 +1,21 @@
+mvn archetype:create -DgroupId=com.vanstone -DartifactId=vanstone-calengine-webapp -DarchetypeArtifactId=maven-archetype-webapp
+mvn archetype:create -DgroupId=cn.com.innodev -DartifactId=innodev-example -Dversion=1.0
+
+mvn archetype:create -DgroupId=cn.com.innodev -DartifactId=innodev-pdp-core -Dversion=1.0
+mvn archetype:create -DgroupId=cn.com.innodev -DartifactId=innodev-pdp-admin-webapp -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0
+mvn archetype:create -DgroupId=cn.com.innodev -DartifactId=innodev-pdp-projectcompany-webapp -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0
+mvn archetype:create -DgroupId=cn.com.innodev -DartifactId=innodev-pdp-weixin-webapp -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0
+mvn archetype:create -DgroupId=cn.com.innodev -DartifactId=innodev-pdp-webservice-webapp -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0
+
+mvn archetype:create -DgroupId=com.vanstone -DartifactId=vanstone-drawedu-webapp -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0
+
+
+http://admin.innodev.com.cn
+http://project.innodev.com.cn
+http://weixin.innodev.com.cn
+http://api.innodev.com.cn
+
+
+http://weixin.innodev.com.cn/weixin-processor/bjjiujuyayuan.action
+
+mvn archetype:create -DgroupId=com.vanstone -DartifactId=red5-webapp -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0

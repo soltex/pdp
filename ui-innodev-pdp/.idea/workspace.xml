@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="756f0b2a-dab4-49bc-92cc-e4ba28c7ad03" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/announcement" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/fonts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/homeowner" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/images" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/images/progressBar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/images/progressBar/progressBar_l.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/images/progressBar/progressBar_m.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/images/progressBar/progressBar_s.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/repairOrder" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weixin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/homeowner/add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/additional-methods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/additional-methods.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/data/ajaxDone_200.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/data/ajaxDone_200_dialog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/chpwd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/contact.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/js/dwz.core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/js/dwz.history.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/js/dwz.pagination.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/js/dwz.regional.zh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/js/dwz.ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/js/dwz.validate.method.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/js/html5shiv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/js/ie10-viewport-bug-workaround.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/announcement/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/homeowner/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/repairOrder/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/innodev-pdp.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/js/jquery-1.11.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/jquery.validate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/jquery.validate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/main.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_bg.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ca.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_cs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_da.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_el.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_es.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_es_AR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_es_AR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_et.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_eu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_fa.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_fr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_gl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_he.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_hr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_hu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_id.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_is.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ja.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ka.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_kk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_kk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ko.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_lt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_lv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_my.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_my.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_nl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_no.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_pl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_pt_BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_pt_BR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_pt_PT.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_pt_PT.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ro.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ru.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_si.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_si.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sr_lat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sr_lat.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_sv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_th.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_tj.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_tj.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_tr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_uk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_vi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_zh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_zh.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_zh_TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_zh_TW.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_es_CL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_es_CL.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_nl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/methods_pt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap-3.2.0-dist/js/respond.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/css/signin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/styles/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="innodev-pdp.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="innodev-pdp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="add.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/homeowner/add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="49" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="690">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dwz.core.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.core.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="132" column="24" selection-start="4224" selection-end="4224" vertical-scroll-proportion="0.7549505" vertical-offset="1675" max-vertical-offset="4560">
+              <folding>
+                <marker date="1413427354000" expanded="true" signature="1388:1596" placeholder="..." />
+                <marker date="1413427354000" expanded="true" signature="1696:1879" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/homeowner/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="60" selection-start="81" selection-end="81" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="1080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="117" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="25" selection-start="104" selection-end="104" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/styles/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="55" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxDone_200.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/data/ajaxDone_200.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="11" selection-start="93" selection-end="99" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="195">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxDone_200_dialog.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/data/ajaxDone_200_dialog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="11" selection-start="108" selection-end="108" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="195">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dwz.ui.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.ui.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="41" selection-start="692" selection-end="698" vertical-scroll-proportion="-3.4629629" vertical-offset="218" max-vertical-offset="4545">
+              <folding>
+                <marker date="1413427339000" expanded="true" signature="3718:3730" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dwz.pagination.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.pagination.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="28" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="3000">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/admin/help.html" />
+        <option value="$PROJECT_DIR$/admin/announcement/index.html" />
+        <option value="$PROJECT_DIR$/admin/repairOrder/index.html" />
+        <option value="$PROJECT_DIR$/admin/login.html" />
+        <option value="$PROJECT_DIR$/admin/main.html" />
+        <option value="$PROJECT_DIR$/doc/data/ajaxDone.json" />
+        <option value="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_zh.js" />
+        <option value="$PROJECT_DIR$/admin/styles/js/dwz.regional.zh.js" />
+        <option value="$PROJECT_DIR$/admin/styles/js/dwz.history.js" />
+        <option value="$PROJECT_DIR$/doc/data/ajaxDone_200.json" />
+        <option value="$PROJECT_DIR$/admin/chpwd.html" />
+        <option value="$PROJECT_DIR$/admin/styles/js/dwz.tableTarget.js" />
+        <option value="$PROJECT_DIR$/admin/styles/css/style.css" />
+        <option value="$PROJECT_DIR$/admin/styles/js/dwz.pagination.js" />
+        <option value="$PROJECT_DIR$/admin/index.html" />
+        <option value="$PROJECT_DIR$/admin/about.html" />
+        <option value="$PROJECT_DIR$/admin/contact.html" />
+        <option value="$PROJECT_DIR$/admin/homeowner/index.html" />
+        <option value="$PROJECT_DIR$/admin/homeowner/add.html" />
+        <option value="$PROJECT_DIR$/doc/data/ajaxDone_200.html" />
+        <option value="$PROJECT_DIR$/doc/data/ajaxDone_200_dialog.html" />
+        <option value="$PROJECT_DIR$/admin/styles/js/dwz.ui.js" />
+        <option value="$PROJECT_DIR$/admin/styles/js/dwz.core.js" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1380" />
+    <option name="height" value="829" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui-innodev-pdp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homeowner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php/dwz_gomeb2b" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/admin/styles/js" />
+      <recent name="$PROJECT_DIR$/doc/data" />
+      <recent name="$PROJECT_DIR$/admin/homeowner" />
+      <recent name="$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization" />
+      <recent name="$PROJECT_DIR$/admin/styles/images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">$USER_HOME$/.subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/.idea" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="756f0b2a-dab4-49bc-92cc-e4ba28c7ad03" name="Default" comment="" />
+      <created>1412902230929</created>
+      <updated>1412902230929</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1380" height="829" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32971507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2683109" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="57" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1890">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="19" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="32" selection-start="4192" selection-end="4192" vertical-scroll-proportion="0.0" vertical-offset="1468" max-vertical-offset="4530">
+          <folding>
+            <marker date="1413427354000" expanded="true" signature="1388:1596" placeholder="..." />
+            <marker date="1413427354000" expanded="true" signature="1696:1879" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.regional.zh.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/homeowner/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="55" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="228" column="48" selection-start="5882" selection-end="5893" vertical-scroll-proportion="0.0" vertical-offset="2960" max-vertical-offset="4500">
+          <folding>
+            <marker date="1413427339000" expanded="true" signature="3718:3730" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/data/ajaxDone_200.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="67" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1650">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="14" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/announcement/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/repairOrder/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/homeowner/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="39" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1470">
+          <folding>
+            <marker date="1413427339000" expanded="true" signature="3718:3730" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="32" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="3825">
+          <folding>
+            <marker date="1413427354000" expanded="true" signature="1388:1596" placeholder="..." />
+            <marker date="1413427354000" expanded="true" signature="1696:1879" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="1" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-validation-1.13.0-dist/additional-methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="26" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.12893982" vertical-offset="405" max-vertical-offset="13995" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_ar.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="54" selection-start="190" selection-end="190" vertical-scroll-proportion="0.06446991" vertical-offset="0" max-vertical-offset="698" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/announcement/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="664" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/repairOrder/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="664" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="14" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0" vertical-offset="296" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_zh.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="36" selection-start="172" selection-end="172" vertical-scroll-proportion="0.06666667" vertical-offset="0" max-vertical-offset="675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.13554217" vertical-offset="0" max-vertical-offset="664" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-validation-1.13.0-dist/localization/messages_zh.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="37" selection-start="467" selection-end="467" vertical-scroll-proportion="0.37974682" vertical-offset="0" max-vertical-offset="711" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-validation-1.13.0-dist/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="936" column="23" selection-start="28335" selection-end="28335" vertical-scroll-proportion="-2.5384614" vertical-offset="13974" max-vertical-offset="20430">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.validate.method.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="46" selection-start="799" selection-end="799" vertical-scroll-proportion="0.33755276" vertical-offset="60" max-vertical-offset="945" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/chpwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="573" selection-end="573" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="19" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.regional.zh.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="55" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.pagination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="28" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="3000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="117" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="25" selection-start="104" selection-end="104" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="23" selection-start="1690" selection-end="1727" vertical-scroll-proportion="-4.375" vertical-offset="630" max-vertical-offset="1905">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/homeowner/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="60" selection-start="81" selection-end="81" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/homeowner/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="49" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/data/ajaxDone_200.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="11" selection-start="93" selection-end="99" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/data/ajaxDone_200_dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="11" selection-start="108" selection-end="108" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="41" selection-start="692" selection-end="698" vertical-scroll-proportion="-3.4629629" vertical-offset="218" max-vertical-offset="4545">
+          <folding>
+            <marker date="1413427339000" expanded="true" signature="3718:3730" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/styles/js/dwz.core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="24" selection-start="4224" selection-end="4224" vertical-scroll-proportion="0.7549505" vertical-offset="1675" max-vertical-offset="4560">
+          <folding>
+            <marker date="1413427354000" expanded="true" signature="1388:1596" placeholder="..." />
+            <marker date="1413427354000" expanded="true" signature="1696:1879" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

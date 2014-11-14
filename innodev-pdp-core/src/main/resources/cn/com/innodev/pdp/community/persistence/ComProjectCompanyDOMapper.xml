@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="cn.com.innodev.pdp.community.persistence.ComProjectCompanyDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.community.persistence.object.ComProjectCompanyDO">
+		<id column="COMMUNITY_ID" property="communityId" jdbcType="VARCHAR" />
+		<result column="LOGO_FILE_ID" property="logoFileId" jdbcType="VARCHAR" />
+		<result column="LOGO_FILE_EXT" property="logoFileExt" jdbcType="VARCHAR" />
+		<result column="LOGO_FILE_WIDTH" property="logoFileWidth" jdbcType="INTEGER" />
+		<result column="LOGO_FILE_HEIGHT" property="logoFileHeight" jdbcType="INTEGER" />
+		<result column="COMPANY_NAME" property="companyName" jdbcType="VARCHAR" />
+		<result column="COMPANY_EMAIL" property="companyEmail" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		COMMUNITY_ID, LOGO_FILE_ID, LOGO_FILE_EXT, LOGO_FILE_WIDTH, LOGO_FILE_HEIGHT,
+		COMPANY_NAME,COMPANY_EMAIL
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from com_project_company
+		where COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from com_project_company
+		where COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectCompanyDO">
+		insert into com_project_company (COMMUNITY_ID, LOGO_FILE_ID,
+		LOGO_FILE_EXT,
+		LOGO_FILE_WIDTH, LOGO_FILE_HEIGHT, COMPANY_NAME,COMPANY_EMAIL
+		)
+		values (#{communityId,jdbcType=VARCHAR}, #{logoFileId,jdbcType=VARCHAR},
+		#{logoFileExt,jdbcType=VARCHAR},
+		#{logoFileWidth,jdbcType=INTEGER}, #{logoFileHeight,jdbcType=INTEGER}, #{companyName,jdbcType=VARCHAR},
+		#{companyEmail,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectCompanyDO">
+		insert into com_project_company
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="communityId != null">
+				COMMUNITY_ID,
+			</if>
+			<if test="logoFileId != null">
+				LOGO_FILE_ID,
+			</if>
+			<if test="logoFileExt != null">
+				LOGO_FILE_EXT,
+			</if>
+			<if test="logoFileWidth != null">
+				LOGO_FILE_WIDTH,
+			</if>
+			<if test="logoFileHeight != null">
+				LOGO_FILE_HEIGHT,
+			</if>
+			<if test="companyName != null">
+				COMPANY_NAME,
+			</if>
+			<if test="companyEmail != null">
+				COMPANY_EMAIL,
+			</if> 
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="communityId != null">
+				#{communityId,jdbcType=VARCHAR},
+			</if>
+			<if test="logoFileId != null">
+				#{logoFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="logoFileExt != null">
+				#{logoFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="logoFileWidth != null">
+				#{logoFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="logoFileHeight != null">
+				#{logoFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="companyName != null">
+				#{companyName,jdbcType=VARCHAR},
+			</if>
+			<if test="companyEmail != null">
+				#{companyEmail,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectCompanyDO">
+		update com_project_company
+		<set>
+			<if test="logoFileId != null">
+				LOGO_FILE_ID = #{logoFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="logoFileExt != null">
+				LOGO_FILE_EXT = #{logoFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="logoFileWidth != null">
+				LOGO_FILE_WIDTH = #{logoFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="logoFileHeight != null">
+				LOGO_FILE_HEIGHT = #{logoFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="companyName != null">
+				COMPANY_NAME = #{companyName,jdbcType=VARCHAR},
+			</if>
+			<if test="companyEmail != null">
+				COMPANY_EMAIL = #{companyEmail,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComProjectCompanyDO">
+		update com_project_company
+		set LOGO_FILE_ID = #{logoFileId,jdbcType=VARCHAR},
+		LOGO_FILE_EXT = #{logoFileExt,jdbcType=VARCHAR},
+		LOGO_FILE_WIDTH = #{logoFileWidth,jdbcType=INTEGER},
+		LOGO_FILE_HEIGHT = #{logoFileHeight,jdbcType=INTEGER},
+		COMPANY_NAME = #{companyName,jdbcType=VARCHAR},
+		COMPANY_EMAIL = #{companyEmail,jdbcType=VARCHAR},
+		where COMMUNITY_ID = #{communityId,jdbcType=VARCHAR}
+	</update>
+	<update id="updateLogoFileInfo" parameterType="map">
+		update com_project_company
+		set 
+		LOGO_FILE_ID = #{logoFileId,jdbcType=VARCHAR},
+		LOGO_FILE_EXT = #{logoFileExt,jdbcType=VARCHAR},
+		LOGO_FILE_WIDTH = #{logoFileWidth,jdbcType=INTEGER},
+		LOGO_FILE_HEIGHT = #{logoFileHeight,jdbcType=INTEGER}
+		where COMMUNITY_ID = #{communityId,jdbcType=VARCHAR} 
+	</update>
+</mapper>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.innodev.pdp.community.persistence.ComCommunityDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.community.persistence.object.ComCommunityDO">
+		<id column="ID" property="id" jdbcType="VARCHAR" />
+		<result column="COMMUNITY_NAME" property="communityName"
+			jdbcType="VARCHAR" />
+		<result column="LONGITUDE" property="longitude" jdbcType="DOUBLE" />
+		<result column="LATITUDE" property="latitude" jdbcType="DOUBLE" />
+		<result column="SYS_INSERT_TIME" property="sysInsertTime"
+			jdbcType="TIMESTAMP" />
+		<result column="SYS_UPDATE_TIME" property="sysUpdateTime"
+			jdbcType="TIMESTAMP" />
+		<result column="AVG_PRICE" property="avgPrice" jdbcType="REAL" />
+		<result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+		<result column="QR_FILE_ID" property="qrFileId" jdbcType="VARCHAR" />
+		<result column="QR_FILE_EXT" property="qrFileExt" jdbcType="VARCHAR" />
+		<result column="QR_FILE_WIDTH" property="qrFileWidth" jdbcType="INTEGER" />
+		<result column="QR_FILE_HEIGHT" property="qrFileHeight"
+			jdbcType="INTEGER" />
+		<result column="CITY_ID" property="cityId" jdbcType="INTEGER" />
+		<result column="INFO_STATE" property="infoState" jdbcType="INTEGER" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs"
+		type="cn.com.innodev.pdp.community.persistence.object.ComCommunityDO"
+		extends="BaseResultMap">
+		<result column="CONTENT" property="content" jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, COMMUNITY_NAME, LONGITUDE, LATITUDE, SYS_INSERT_TIME,
+		SYS_UPDATE_TIME, AVG_PRICE,
+		ADDRESS, QR_FILE_ID, QR_FILE_EXT, QR_FILE_WIDTH, QR_FILE_HEIGHT, CITY_ID,
+		INFO_STATE
+	</sql>
+	<sql id="Blob_Column_List">
+		CONTENT
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from com_community
+		where ID = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from com_community
+		where ID = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityDO">
+		insert into com_community (ID, COMMUNITY_NAME, LONGITUDE,
+		LATITUDE, SYS_INSERT_TIME, SYS_UPDATE_TIME,
+		AVG_PRICE, ADDRESS, QR_FILE_ID,
+		QR_FILE_EXT, QR_FILE_WIDTH, QR_FILE_HEIGHT,
+		CITY_ID, INFO_STATE, CONTENT
+		)
+		values (#{id,jdbcType=VARCHAR}, #{communityName,jdbcType=VARCHAR},
+		#{longitude,jdbcType=DOUBLE},
+		#{latitude,jdbcType=DOUBLE}, #{sysInsertTime,jdbcType=TIMESTAMP},
+		#{sysUpdateTime,jdbcType=TIMESTAMP},
+		#{avgPrice,jdbcType=REAL}, #{address,jdbcType=VARCHAR}, #{qrFileId,jdbcType=VARCHAR},
+		#{qrFileExt,jdbcType=VARCHAR}, #{qrFileWidth,jdbcType=INTEGER},
+		#{qrFileHeight,jdbcType=INTEGER},
+		#{cityId,jdbcType=INTEGER}, #{infoState,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityDO">
+		insert into com_community
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="communityName != null">
+				COMMUNITY_NAME,
+			</if>
+			<if test="longitude != null">
+				LONGITUDE,
+			</if>
+			<if test="latitude != null">
+				LATITUDE,
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME,
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME,
+			</if>
+			<if test="avgPrice != null">
+				AVG_PRICE,
+			</if>
+			<if test="address != null">
+				ADDRESS,
+			</if>
+			<if test="qrFileId != null">
+				QR_FILE_ID,
+			</if>
+			<if test="qrFileExt != null">
+				QR_FILE_EXT,
+			</if>
+			<if test="qrFileWidth != null">
+				QR_FILE_WIDTH,
+			</if>
+			<if test="qrFileHeight != null">
+				QR_FILE_HEIGHT,
+			</if>
+			<if test="cityId != null">
+				CITY_ID,
+			</if>
+			<if test="infoState != null">
+				INFO_STATE,
+			</if>
+			<if test="content != null">
+				CONTENT,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="communityName != null">
+				#{communityName,jdbcType=VARCHAR},
+			</if>
+			<if test="longitude != null">
+				#{longitude,jdbcType=DOUBLE},
+			</if>
+			<if test="latitude != null">
+				#{latitude,jdbcType=DOUBLE},
+			</if>
+			<if test="sysInsertTime != null">
+				#{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				#{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="avgPrice != null">
+				#{avgPrice,jdbcType=REAL},
+			</if>
+			<if test="address != null">
+				#{address,jdbcType=VARCHAR},
+			</if>
+			<if test="qrFileId != null">
+				#{qrFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="qrFileExt != null">
+				#{qrFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="qrFileWidth != null">
+				#{qrFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="qrFileHeight != null">
+				#{qrFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="cityId != null">
+				#{cityId,jdbcType=INTEGER},
+			</if>
+			<if test="infoState != null">
+				#{infoState,jdbcType=INTEGER},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityDO">
+		update com_community
+		<set>
+			<if test="communityName != null">
+				COMMUNITY_NAME = #{communityName,jdbcType=VARCHAR},
+			</if>
+			<if test="longitude != null">
+				LONGITUDE = #{longitude,jdbcType=DOUBLE},
+			</if>
+			<if test="latitude != null">
+				LATITUDE = #{latitude,jdbcType=DOUBLE},
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="avgPrice != null">
+				AVG_PRICE = #{avgPrice,jdbcType=REAL},
+			</if>
+			<if test="address != null">
+				ADDRESS = #{address,jdbcType=VARCHAR},
+			</if>
+			<if test="qrFileId != null">
+				QR_FILE_ID = #{qrFileId,jdbcType=VARCHAR},
+			</if>
+			<if test="qrFileExt != null">
+				QR_FILE_EXT = #{qrFileExt,jdbcType=VARCHAR},
+			</if>
+			<if test="qrFileWidth != null">
+				QR_FILE_WIDTH = #{qrFileWidth,jdbcType=INTEGER},
+			</if>
+			<if test="qrFileHeight != null">
+				QR_FILE_HEIGHT = #{qrFileHeight,jdbcType=INTEGER},
+			</if>
+			<if test="cityId != null">
+				CITY_ID = #{cityId,jdbcType=INTEGER},
+			</if>
+			<if test="infoState != null">
+				INFO_STATE = #{infoState,jdbcType=INTEGER},
+			</if>
+			<if test="content != null">
+				CONTENT = #{content,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKeyWithBLOBs"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityDO">
+		update com_community
+		set COMMUNITY_NAME = #{communityName,jdbcType=VARCHAR},
+		LONGITUDE = #{longitude,jdbcType=DOUBLE},
+		LATITUDE = #{latitude,jdbcType=DOUBLE},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		AVG_PRICE = #{avgPrice,jdbcType=REAL},
+		ADDRESS = #{address,jdbcType=VARCHAR},
+		QR_FILE_ID = #{qrFileId,jdbcType=VARCHAR},
+		QR_FILE_EXT = #{qrFileExt,jdbcType=VARCHAR},
+		QR_FILE_WIDTH = #{qrFileWidth,jdbcType=INTEGER},
+		QR_FILE_HEIGHT = #{qrFileHeight,jdbcType=INTEGER},
+		CITY_ID = #{cityId,jdbcType=INTEGER},
+		INFO_STATE = #{infoState,jdbcType=INTEGER},
+		CONTENT = #{content,jdbcType=LONGVARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComCommunityDO">
+		update com_community
+		set COMMUNITY_NAME = #{communityName,jdbcType=VARCHAR},
+		LONGITUDE = #{longitude,jdbcType=DOUBLE},
+		LATITUDE = #{latitude,jdbcType=DOUBLE},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		AVG_PRICE = #{avgPrice,jdbcType=REAL},
+		ADDRESS = #{address,jdbcType=VARCHAR},
+		QR_FILE_ID = #{qrFileId,jdbcType=VARCHAR},
+		QR_FILE_EXT = #{qrFileExt,jdbcType=VARCHAR},
+		QR_FILE_WIDTH = #{qrFileWidth,jdbcType=INTEGER},
+		QR_FILE_HEIGHT = #{qrFileHeight,jdbcType=INTEGER},
+		CITY_ID = #{cityId,jdbcType=INTEGER},
+		INFO_STATE = #{infoState,jdbcType=INTEGER}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateQR" parameterType="map">
+		update com_community 
+		set 
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		QR_FILE_ID = #{qrFileId,jdbcType=VARCHAR},
+		QR_FILE_EXT = #{qrFileExt,jdbcType=VARCHAR},
+		QR_FILE_WIDTH = #{qrFileWidth,jdbcType=INTEGER},
+		QR_FILE_HEIGHT = #{qrFileHeight,jdbcType=INTEGER}
+		where ID = #{communityId,jdbcType=VARCHAR}
+	</update>
+	
+	<select id="selectByKey" parameterType="map" resultType="string">
+		SELECT com_community.ID FROM 
+		com_community INNER JOIN sys_city ON com_community.CITY_ID = sys_city.ID 
+		INNER JOIN sys_province ON sys_province.ID = sys_city.PROVINCE_ID 
+		<where> 
+			<include refid="select_by_key_sql" />
+		</where>
+		ORDER BY com_community.SYS_INSERT_TIME DESC 
+	</select>
+	
+	<select id="selectCountByKey" parameterType="map" resultType="integer">
+		SELECT count(com_community.ID) AS C FROM 
+		com_community INNER JOIN sys_city ON com_community.CITY_ID = sys_city.ID 
+		INNER JOIN sys_province ON sys_province.ID = sys_city.PROVINCE_ID 
+		<where> 
+			<include refid="select_by_key_sql" />
+		</where>
+		ORDER BY com_community.SYS_INSERT_TIME DESC 
+	</select>
+	
+	<sql id="select_by_key_sql">
+		<if test="key != null and key != ''">
+			com_community.COMMUNITY_NAME LIKE "%"#{key,jdbcType=VARCHAR}"%" 
+			OR 
+			com_community.CONTENT LIKE "%"#{key,jdbcType=VARCHAR}"%"  
+			OR 
+			com_community.ADDRESS LIKE "%"#{key,jdbcType=VARCHAR}"%" 
+			OR 
+			sys_city.TITLE LIKE "%"#{key,jdbcType=VARCHAR}"%" 
+			OR 
+			sys_province.TITLE LIKE "%"#{key,jdbcType=VARCHAR}"%" 
+		</if>
+	</sql>
+</mapper>

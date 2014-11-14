@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="cn.com.innodev.pdp.proprietor.persistence.PropQACommentDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.proprietor.persistence.object.PropQACommentDO">
+		<id column="ID" property="id" jdbcType="VARCHAR" />
+		<result column="FROM_PROP_ID" property="fromPropId" jdbcType="VARCHAR" />
+		<result column="TO_PROP_ID" property="toPropId" jdbcType="VARCHAR" />
+		<result column="SYS_INSERT_TIME" property="sysInsertTime"
+			jdbcType="TIMESTAMP" />
+		<result column="SYS_UPDATE_TIME" property="sysUpdateTime"
+			jdbcType="TIMESTAMP" />
+		<result column="QA_ID" property="qaId" jdbcType="VARCHAR" />
+	</resultMap>
+	<resultMap id="ResultMapWithBLOBs"
+		type="cn.com.innodev.pdp.proprietor.persistence.object.PropQACommentDO"
+		extends="BaseResultMap">
+		<result column="CONTENT" property="content" jdbcType="LONGVARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, FROM_PROP_ID, TO_PROP_ID, SYS_INSERT_TIME, SYS_UPDATE_TIME, QA_ID
+	</sql>
+	<sql id="Blob_Column_List">
+		CONTENT
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from prop_qa_comment
+		where ID = #{id,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from prop_qa_comment
+		where ID = #{id,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropQACommentDO">
+		insert into prop_qa_comment (ID, FROM_PROP_ID,
+		TO_PROP_ID, SYS_INSERT_TIME, SYS_UPDATE_TIME,
+		QA_ID, CONTENT)
+		values (#{id,jdbcType=VARCHAR}, #{fromPropId,jdbcType=VARCHAR},
+		#{toPropId,jdbcType=VARCHAR}, #{sysInsertTime,jdbcType=TIMESTAMP},
+		#{sysUpdateTime,jdbcType=TIMESTAMP},
+		#{qaId,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR})
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropQACommentDO">
+		insert into prop_qa_comment
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="fromPropId != null">
+				FROM_PROP_ID,
+			</if>
+			<if test="toPropId != null">
+				TO_PROP_ID,
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME,
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME,
+			</if>
+			<if test="qaId != null">
+				QA_ID,
+			</if>
+			<if test="content != null">
+				CONTENT,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=VARCHAR},
+			</if>
+			<if test="fromPropId != null">
+				#{fromPropId,jdbcType=VARCHAR},
+			</if>
+			<if test="toPropId != null">
+				#{toPropId,jdbcType=VARCHAR},
+			</if>
+			<if test="sysInsertTime != null">
+				#{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				#{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="qaId != null">
+				#{qaId,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				#{content,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropQACommentDO">
+		update prop_qa_comment
+		<set>
+			<if test="fromPropId != null">
+				FROM_PROP_ID = #{fromPropId,jdbcType=VARCHAR},
+			</if>
+			<if test="toPropId != null">
+				TO_PROP_ID = #{toPropId,jdbcType=VARCHAR},
+			</if>
+			<if test="sysInsertTime != null">
+				SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="sysUpdateTime != null">
+				SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="qaId != null">
+				QA_ID = #{qaId,jdbcType=VARCHAR},
+			</if>
+			<if test="content != null">
+				CONTENT = #{content,jdbcType=LONGVARCHAR},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKeyWithBLOBs"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropQACommentDO">
+		update prop_qa_comment
+		set
+		FROM_PROP_ID = #{fromPropId,jdbcType=VARCHAR},
+		TO_PROP_ID = #{toPropId,jdbcType=VARCHAR},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		QA_ID = #{qaId,jdbcType=VARCHAR},
+		CONTENT = #{content,jdbcType=LONGVARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.proprietor.persistence.object.PropQACommentDO">
+		update prop_qa_comment
+		set
+		FROM_PROP_ID = #{fromPropId,jdbcType=VARCHAR},
+		TO_PROP_ID = #{toPropId,jdbcType=VARCHAR},
+		SYS_INSERT_TIME = #{sysInsertTime,jdbcType=TIMESTAMP},
+		SYS_UPDATE_TIME = #{sysUpdateTime,jdbcType=TIMESTAMP},
+		QA_ID = #{qaId,jdbcType=VARCHAR}
+		where ID = #{id,jdbcType=VARCHAR}
+	</update>
+	<select id="selectByQaId" parameterType="map" resultMap="ResultMapWithBLOBs">
+		SELECT <include refid="Base_Column_List"/>,<include refid="Blob_Column_List"/> FROM 
+		prop_qa_comment 
+		WHERE 
+		QA_ID = #{qaId,jdbcType=VARCHAR} 
+		ORDER BY SYS_INSERT_TIME DESC 
+	</select>
+	<select id="selectCountByQaId" parameterType="map" resultType="integer">
+		SELECT COUNT(0) AS C FROM 
+		prop_qa_comment 
+		WHERE 
+		QA_ID = #{qaId,jdbcType=VARCHAR} 
+	</select>
+</mapper>

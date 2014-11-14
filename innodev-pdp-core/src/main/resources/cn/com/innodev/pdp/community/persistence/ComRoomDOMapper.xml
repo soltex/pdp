@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.innodev.pdp.community.persistence.ComRoomDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.community.persistence.object.ComRoomDO">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="ROOM_NO" property="roomNo" jdbcType="VARCHAR" />
+		<result column="PROPRIETOR_COUNT" property="proprietorCount"
+			jdbcType="INTEGER" />
+		<result column="BUILDING_ID" property="buildingId" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, ROOM_NO, PROPRIETOR_COUNT, BUILDING_ID
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from com_room
+		where ID = #{id,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from com_room
+		where ID = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComRoomDO"
+		useGeneratedKeys="true" keyProperty="id">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			select LAST_INSERT_ID() as id
+		</selectKey>
+		insert into com_room (ID, ROOM_NO, PROPRIETOR_COUNT,
+		BUILDING_ID)
+		values (#{id,jdbcType=INTEGER}, #{roomNo,jdbcType=VARCHAR},
+		#{proprietorCount,jdbcType=INTEGER},
+		#{buildingId,jdbcType=INTEGER})
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComRoomDO"
+		useGeneratedKeys="true" keyProperty="id">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			select LAST_INSERT_ID() as id
+		</selectKey>
+		insert into com_room
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="roomNo != null">
+				ROOM_NO,
+			</if>
+			<if test="proprietorCount != null">
+				PROPRIETOR_COUNT,
+			</if>
+			<if test="buildingId != null">
+				BUILDING_ID,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="roomNo != null">
+				#{roomNo,jdbcType=VARCHAR},
+			</if>
+			<if test="proprietorCount != null">
+				#{proprietorCount,jdbcType=INTEGER},
+			</if>
+			<if test="buildingId != null">
+				#{buildingId,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComRoomDO">
+		update com_room
+		<set>
+			<if test="roomNo != null">
+				ROOM_NO = #{roomNo,jdbcType=VARCHAR},
+			</if>
+			<if test="proprietorCount != null">
+				PROPRIETOR_COUNT = #{proprietorCount,jdbcType=INTEGER},
+			</if>
+			<if test="buildingId != null">
+				BUILDING_ID = #{buildingId,jdbcType=INTEGER},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.community.persistence.object.ComRoomDO">
+		update com_room
+		set ROOM_NO = #{roomNo,jdbcType=VARCHAR},
+		PROPRIETOR_COUNT = #{proprietorCount,jdbcType=INTEGER},
+		BUILDING_ID = #{buildingId,jdbcType=INTEGER}
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<select id="selectByBuildingId" parameterType="map" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		com_room
+		WHERE
+		BUILDING_ID = #{buildingId,jdbcType=INTEGER}
+		ORDER BY ROOM_NO
+	</select>
+	<select id="selectByBuildingId_RoomNo" parameterType="map"
+		resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		com_room
+		WHERE
+		BUILDING_ID = #{buildingId,jdbcType=INTEGER} AND ROOM_NO =
+		#{roomNo,jdbcType=VARCHAR}
+	</select>
+	<select id="selectByBuildingId_RoomNo_NotSelf" parameterType="map"
+		resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		com_room
+		WHERE
+		ROOM_NO = #{roomNo,jdbcType=VARCHAR}
+		AND ID &lt;&gt; #{id,jdbcType=INTEGER}
+	</select>
+</mapper>

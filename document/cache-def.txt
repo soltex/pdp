@@ -1,0 +1,3 @@
+common中 Province 以及 City 缓冲定义方式,使用 sys_region_前缀
+	1. 单体对象缓冲,sys_region_province_值，sys_region_city_值
+	2.列表对象使用,sys_regionlist_province, sys_regionlist_city_pid_1

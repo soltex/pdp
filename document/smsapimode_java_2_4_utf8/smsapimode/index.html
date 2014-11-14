@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>时代互联SMS-API接口模式演示程序</title>
+<link href="share/api_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="left" bgcolor="#00314F"><img src="images/api_01.jpg" width="713" height="87" /></td>
+		<td align="left" bgcolor="#00314F">
+			<table width="100%" height="80" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="right" style="padding-right:20px;">&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="color:#FFFFFF;padding-right:20px;" align="right"><strong>时代互联接口模式源程序 Version 2.4</strong></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="25" background="images/api_03.jpg"></td>
+		<td bgcolor="#000000">&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="186" rowspan="2" valign="top" bgcolor="#787878">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="20" bgcolor="#000000"></td>
+				</tr>
+				<tr>
+					<td>
+						<UL  class"menu_link">
+							<LI ><A href="" class="menu_hot"><font color="#FF9900">返回演示首页</font></A> </LI>
+							<li><a href="doc/config.html" class="menu">接口模式说明</a> </li>
+							<li><a href="doc/func.html" class="menu">接口函数说明</a> </li>
+							<LI><A href="smsdemo/smsconf.jsp"class="menu">SMS接口配置</A> </li>
+							<li><a href="smsdemo/smssend.jsp"class="menu">发送短信</a> </li>
+							<li><a href="smsdemo/smsaccount.jsp"class="menu">短信用户余额查询</a> </li>
+							<li><a href="smsdemo/smsreceive.jsp"class="menu">回复短信查询</a> </li>
+						</UL>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+		<td valign="top" bgcolor="#FFFFFF" style="padding:1px 0px 1px 1px;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="left" bgcolor="#030504"><img src="images/api_07.jpg" width="819" height="183" /></td>
+				</tr>
+				<tr>
+					<td align="left"><img src="images/api_08.jpg" width="819" height="12" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" style="padding:5px 5px 10px 10px;" bgcolor="#FFFFFF">
+			<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#C6DEEA">
+				<tr>
+					<td bgcolor="ecf4f8" style="padding-left:10px;"><span class="text">演示首页</span></td>
+				</tr>
+			</table>
+			<table width="100%"  border="1" align="center" cellpadding="1" cellspacing="0" bordercolorlight="#FFFFFF" bordercolor="#ECF4F8" style="margin-top:15px;">
+				<tr>
+					<td scope="row">
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<th bgcolor="#ECF4F8" class="text_blue14"><strong> = 接口模式演示程序使用说明  =</strong></th>
+							</tr>
+						</table>
+						<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<th width="16%" scope="row"><img src="images/pic_1.jpg" width="61" height="72" hspace="10" vspace="10"></th>
+								<td width="84%">请选择下面的产品名称，进入相关的产品演示</td>
+							</tr>
+						</table>
+						<table cellspacing="0" cellpadding="0" width="100%">
+							<tr bgcolor="#f7f7f7">
+								<th bgcolor="#ECF4F8" class="text_blue14" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<th scope="row" width="16%" height="80"><img height="60" src="images/sms.jpg" width="66" /></th>
+								<td scope="row" width="54%"><strong><A href="doc/config.html" arget=_blank >接口模式说明</A></strong><br />
+									-------------------------------------------------<br />
+									实现与时代互联SMS短信实时在线发送接口，使网站简单，快捷实现发送短信、查询帐号余额等功能： <br />
+								</td>
+								<td valign="bottom" scope="row" width="30%">
+									<ul>
+										<li><a href="doc/config.html">配置说明</a></li>
+										<li><a href="doc/func.html">接口函数说明</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr bgcolor="#f7f7f7">
+								<th bgcolor="#ECF4F8" class="text_blue14" colspan="3">&nbsp;</th>
+							</tr>
+						</table>
+						<table cellspacing="0" cellpadding="0" width="100%">
+							<tr>
+								<th scope="row" width="16%" height="80"><img height="60" src="images/sms.jpg" width="66" /></th>
+								<td scope="row" width="54%"><strong><A href="smsdemo/smsconf.jsp?tag=1" >SMS短信演示</A></strong><br />
+									-------------------------------------------------<br />
+									用xml传递数据， 实现代理用户在时代互联进行SMS短信发送，远程帐户余额查询等相关操作：<br />
+								</td>
+								<td valign="bottom" scope="row" width="30%">
+									<ul>
+										<li><a href="smsdemo/smsconf.jsp?tag=1">SMS短信发送演示</a></li>
+										<li><a href="smsdemo/smsaccount.jsp">短信余额查询</a></li>
+										<li><a href="smsdemo/smsreceive.jsp">回复短信查询</a> </li>
+									</ul>
+								</td>
+							</tr>
+							<tr bgcolor="#f7f7f7">
+								<th bgcolor="#ECF4F8" class="text_blue14" colspan="3">&nbsp;</th>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="30" align="center" bgcolor="#00314F" style="color:#FFFFFF">时代互联 版权所有</td>
+	</tr>
+</table>
+</body>
+</html>

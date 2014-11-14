@@ -1,0 +1,89 @@
+业务方法上 @NotNull @Valid
+
+Vanstone-Redis
+Vanstone-weedfs 
+Vanstone-Elasticsearh
+Vanstone-Fs
+他们的配置文件全部使用Vanstone为前缀
+
+https 
+spring valid 业务验证框架
+scala
+akka
+开发基于spring的repo自定义方式
+spring自定义注解以及扫描实现方式
+https://github.com/allwefantasy/ServiceFramework
+
+
+完成prop count 字段整合
+logger trace 方式
+
+业主和房间号设计重写一下
+张总ccap文档
+设计一下event方式
+
+
+c-cap 登陆页修改。
+下面是海正辉瑞的公司名称
+
+
+
+
+新建社区流程
+1. 新建基本信息
+2. 新建工程公司信息
+3. 创建默认最高权限账号（可禁用掉）
+
+
+
+区域数据管理
+	1. 增加编辑省份
+	2. 省份列表
+	3. 城市列表
+	4. 区域数据导入
+	5. 城市以及省份名称重复
+	6. BIZBeanListener
+	7. 城市信息全部列表
+	8. region信息列表			
+	9. 后台信息布局
+	10. FS common bug      --	    temp 临时文件 solved.
+	11. 微信群发 weixin-client 集成
+	
+	
+
+公司内部服务器 ftp 和文档管理 权限方式
+
+
+横向菜单定义
+
+
+社区数据管理
+	社区信息检索
+	社区开同向导
+业主管理
+	业主信息检索
+系统信息管理
+	数据库自动备份
+	系统状态查看
+	WeedFS | Local 文件系统状态
+	Elasticsearch管理入口
+基础数据管理
+	城市信息管理
+	短信平台管理
+	邮件配置管理
+微信管理
+	微信群发管理
+	微信菜单管理
+管理员信息管理
+	管理员列表
+	增加管理员
+
+
+
+模板信息增加textarea或者input类型
+社区id定义常量信息指定（多个信息指定）
+
+WeixinServlet 从url中获取communityID	http://weixin-service.c-cap.com.cn/weixinprocess/jiujuyayuan.action
+
+
+地理位置获取以及存储

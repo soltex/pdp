@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper
+	namespace="cn.com.innodev.pdp.framework.bizcommon.persistence.SysCityDOMapper">
+	<resultMap id="BaseResultMap"
+		type="cn.com.innodev.pdp.framework.bizcommon.persistence.object.SysCityDO">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="TITLE" property="title" jdbcType="VARCHAR" />
+		<result column="FIRST_LETTER" property="firstLetter" jdbcType="VARCHAR" />
+		<result column="PROVINCE_ID" property="provinceId" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		ID, TITLE, FIRST_LETTER, PROVINCE_ID
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from sys_city
+		where ID = #{id,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from sys_city
+		where ID = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert"
+		parameterType="cn.com.innodev.pdp.framework.bizcommon.persistence.object.SysCityDO"
+		useGeneratedKeys="true" keyProperty="id">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			select LAST_INSERT_ID() as id
+		</selectKey>
+		insert into sys_city (ID, TITLE, FIRST_LETTER,
+		PROVINCE_ID)
+		values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR},
+		#{firstLetter,jdbcType=VARCHAR},
+		#{provinceId,jdbcType=INTEGER})
+	</insert>
+	<insert id="insertSelective"
+		parameterType="cn.com.innodev.pdp.framework.bizcommon.persistence.object.SysCityDO"
+		useGeneratedKeys="true" keyProperty="id">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			select LAST_INSERT_ID() as id
+		</selectKey>
+		insert into sys_city
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				ID,
+			</if>
+			<if test="title != null">
+				TITLE,
+			</if>
+			<if test="firstLetter != null">
+				FIRST_LETTER,
+			</if>
+			<if test="provinceId != null">
+				PROVINCE_ID,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="title != null">
+				#{title,jdbcType=VARCHAR},
+			</if>
+			<if test="firstLetter != null">
+				#{firstLetter,jdbcType=VARCHAR},
+			</if>
+			<if test="provinceId != null">
+				#{provinceId,jdbcType=INTEGER},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="cn.com.innodev.pdp.framework.bizcommon.persistence.object.SysCityDO">
+		update sys_city
+		<set>
+			<if test="title != null">
+				TITLE = #{title,jdbcType=VARCHAR},
+			</if>
+			<if test="firstLetter != null">
+				FIRST_LETTER = #{firstLetter,jdbcType=VARCHAR},
+			</if>
+			<if test="provinceId != null">
+				PROVINCE_ID = #{provinceId,jdbcType=INTEGER},
+			</if>
+		</set>
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="cn.com.innodev.pdp.framework.bizcommon.persistence.object.SysCityDO">
+		update sys_city
+		set TITLE = #{title,jdbcType=VARCHAR},
+		FIRST_LETTER = #{firstLetter,jdbcType=VARCHAR},
+		PROVINCE_ID = #{provinceId,jdbcType=INTEGER}
+		where ID = #{id,jdbcType=INTEGER}
+	</update>
+	<select id="selectByProvinceId" parameterType="map" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List"/> FROM 
+		sys_city 
+		WHERE 
+		PROVINCE_ID = #{provinceId,jdbcType=INTEGER} 
+		ORDER BY FIRST_LETTER 
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List"/> FROM 
+		sys_city 
+		ORDER BY 
+		PROVINCE_ID , FIRST_LETTER 
+	</select>
+	<select id="selectByProvinceId_Title" parameterType="map" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List"/> FROM 
+		sys_city 
+		WHERE 
+		PROVINCE_ID = #{provinceId,jdbcType=INTEGER} 
+		AND 
+		TITLE = #{title,jdbcType=VARCHAR}
+	</select>
+	<select id="selectByProvinceId_Title_NotSelf" parameterType="map" resultMap="BaseResultMap">
+		SELECT <include refid="Base_Column_List"/> FROM 
+		sys_city 
+		WHERE 
+		PROVINCE_ID = #{provinceId,jdbcType=INTEGER} 
+		AND 
+		TITLE = #{title,jdbcType=VARCHAR}
+		AND 
+		ID &lt;&gt; #{id,jdbcType=INTEGER}
+	</select>
+</mapper>
